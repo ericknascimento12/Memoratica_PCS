@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package memoratica_pcs;
-
+import java.util.Random;
 
 public class Partida {
     //atributos
@@ -60,7 +60,28 @@ public class Partida {
     
     private void distribuirPecas(int Tabuleiro)
     {
+     
         
+        /*
+        Random gerador = new Random();
+ 
+        int numero1 = gerador.nextInt();
+        int numero2 = gerador.nextInt();
+        
+ 
+       for(int i=0; i<=Tabuleiro.lenght;i++){
+        
+        switch(operador)
+        
+        case '+': Tabuleiro [i]=numero1+numero2;
+        break;
+        
+        case '-': Tabuleiro [i]=numero1-numero2;
+        break;
+        }
+        
+    }
+}*/
     }
     
     private void selecionarPecas(Peca peca1,Peca peca2)    
