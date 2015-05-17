@@ -11,6 +11,7 @@ public class Partida {
     private String id_partida;
     private  int cronometro;
     private int tempo;
+    private Jogada jogada;
     
  
     //construtor
