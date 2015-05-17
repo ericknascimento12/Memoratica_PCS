@@ -14,7 +14,7 @@ public class Modulo {
     private char operacao;
     private int tempo;
 // COMENTARIO   
-    //COMETARIO2
+    //COMENTARIO2
     //construtor
     
     public Modulo(char operacao,int tempo)
