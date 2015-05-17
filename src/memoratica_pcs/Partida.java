@@ -11,6 +11,7 @@ public class Partida {
     private String id_partida;
     private  int cronometro;
     private int tempo;
+    private Jogada jogada;
     
  
     //construtor
@@ -62,12 +63,20 @@ public class Partida {
         
     }
     
-    private void selecionarPecas(char operador)    
+    private void selecionarPecas(Peca peca1,Peca peca2)    
     {
-        
+        if(peca1.virada=true)
+         {
+           jogada.peca1=peca1;
+         }
+           
+        if(peca2.virada=true)
+        {
+         jogada.peca2=peca2;
+        }
     }
     
-    public boolean verificaPar(Jogada jogada)
+    public boolean verificaPar()
     { 
         if(jogada.peca1.resultadoOperacao()==jogada.peca2.resultadoOperacao())
         {
@@ -85,9 +94,9 @@ public class Partida {
         inicializarPartida();             
         
     }
-    public void desvirar()
+    public void desvirar(Peca peca)
     {
-        
+        peca.virada=true;
     }
 }
 
