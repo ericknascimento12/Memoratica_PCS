@@ -14,7 +14,10 @@ public class Tabuleiro {
     int id_tabuleiro;
     
     //construtor    
-private  Tabuleiro Tabuleiro [][] = new Tabuleiro[4][4];
+public Tabuleiro Tabuleiro [][] = new Tabuleiro[5][4];
+
+
+
   
       
   
