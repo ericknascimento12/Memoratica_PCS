@@ -11,6 +11,7 @@ public class Partida {
     private String id_partida;
     private  int cronometro;
     private int tempo;
+    
  
     //construtor
     public Partida Partida=new Partida();
@@ -18,16 +19,42 @@ public class Partida {
     //métodos   
     
     public char selecionaModulo(char operador)
-    {   
+    {         
+        
         return operador;
     }
-    private boolean inicializarPartida(int cronometro)
+    private boolean inicializarPartida()
     {
+        if(cronometro==0)
+        {
+            return false;
+        }
+        
         return true;
     }
     public boolean inicializarCronometro()
-    {
-        return true;
+    {    
+     if(inicializarPartida()==true)
+        {        
+         cronometro = tempo;  
+          try{  
+               for (int i = cronometro; i > 0; i--)
+                 {  
+                  System.out.println(i + " segundos");  
+                  Thread.sleep(1000); // 1 segundo  
+                 }  
+             System.out.println("Seu tempo acabou!");  
+             } 
+           catch (InterruptedException e)
+            {  
+             
+             return true;
+            }             
+            
+          return true;
+        }
+     else
+         return false;
     }
     
     private void distribuirPecas(int Tabuleiro)
@@ -40,9 +67,9 @@ public class Partida {
         
     }
     
-    public boolean verificaPar(int peca1,int peca2)
+    public boolean verificaPar(Jogada jogada)
     { 
-        if(peca1==peca2)
+        if(jogada.peca1.resultadoOperacao()==jogada.peca2.resultadoOperacao())
         {
             return true;
         }
@@ -50,10 +77,13 @@ public class Partida {
             return false;
     }
     
-    public boolean verificaTempo(int tempo)
+    public void verificaTempo(int tempoF)
     {
+        tempoF=tempo-cronometro;
+        System.out.println("Tempo gasto:"+ tempoF);
         
-        return true;
+        inicializarPartida();             
+        
     }
     public void desvirar()
     {
