@@ -16,14 +16,31 @@ public class Peca {
    int operando2;
    char operador;
    boolean virada;
+   int resultado;
     //Construtor
     public Peca()
     {
-      
+        virada = false;   
     }
     
     int resultadoOperacao(){
-        return 0;
+        if(operador =='+') {
+          resultado = operando1+operando2;
+        } 
+        
+        if(operador == '-'){
+         resultado = operando1-operando2;
+        }
+        
+        if(operador == '/'){
+         resultado = operando1/operando2;
+        }
+        
+        if (operador == '*'){
+          resultado = operando1 * operando2;
+        }
+        
+        return resultado;
     }
     
     //métodos
