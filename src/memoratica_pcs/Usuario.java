@@ -23,10 +23,11 @@ public class Usuario {
     }
     //Metodos
     
-    public int obterEstatistica(int id_usuario)
+    public String obterEstatistica(int id_usuario)
     {
        int tempo=0;
-        return tempo;
+       return "";
+               
     }
     
 }

@@ -12,15 +12,20 @@ package memoratica_pcs;
 public class Peca {
     
     //Atributos
-    char tipoOperacao;
-    int resultadoOperacao;
-    boolean virada;
+   int operando1;
+   int operando2;
+   char operador;
+   boolean virada;
     //Construtor
-    public Peca(char tipoOperacao,int resultadoOperacao)
+    public Peca()
     {
-        this.tipoOperacao=tipoOperacao;
-        this.resultadoOperacao=resultadoOperacao;
+      
     }
+    
+    int resultadoOperacao(){
+        return 0;
+    }
+    
     //métodos
     
 }
