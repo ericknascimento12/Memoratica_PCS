@@ -9,11 +9,11 @@ package memoratica_pcs;
  *
  * @author Gian
  */
-/*public class Modulo {
+public class Modulo {
     //atributos
     private char operacao;
     private int tempo;
-    
+// COMENTARIO    
     //construtor
     
     public Modulo(char operacao,int tempo)
@@ -21,4 +21,4 @@ package memoratica_pcs;
         this.operacao=operacao;
         this.tempo=tempo;
     }
-}/*
+}
