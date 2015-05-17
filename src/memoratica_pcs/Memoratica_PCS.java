@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package memoratica_pcs;
-
+import java.util.Scanner;
 /**
  *
  * @author Erick
@@ -15,7 +15,7 @@ public class Memoratica_PCS {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("Teste de sincronização");
     }
     
 }
