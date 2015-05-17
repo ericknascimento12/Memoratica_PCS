@@ -10,10 +10,14 @@ public class Partida {
     //atributos
     private String id_partida;
     private  int cronometro;
+    protected  int peca1;     
+    protected int peca2;
     private int tempo;
+    protected String usuario;
+    protected int tabuleiro;
     //construtor
     public Partida Partida=new Partida();
-   
+    
     //métodos   
     
     public char selecionaModulo(char operador)
