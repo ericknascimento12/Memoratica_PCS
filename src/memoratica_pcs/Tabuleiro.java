@@ -4,8 +4,7 @@
  * and open the template in the editor.
  */
 package memoratica_pcs;
-import java.util.Scanner;
-import java.util.Random;
+
 /**
  *
  * @author Gian
