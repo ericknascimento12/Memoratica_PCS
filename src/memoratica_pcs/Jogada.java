@@ -20,7 +20,7 @@ public class Jogada {
     int ContaJogada(){
         return 0;
 }
-    Jogada () {}
+    public Jogada Jogada=new Jogada();
     
     
     
