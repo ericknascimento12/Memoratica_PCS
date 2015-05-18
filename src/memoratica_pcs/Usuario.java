@@ -18,11 +18,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 
@@ -34,7 +37,7 @@ public class Usuario {
     private int id_usuario;
     private String nome;
     private char modulo_liberado;
-    private static final String USUARIO_XML = "usuario.xml";
+ //   private static final String USUARIO_XML = "usuario.xml";
 
     
     //Construtor
@@ -45,21 +48,47 @@ public class Usuario {
 
     }
     
-    public void salvarUsuario(Usuario usuario) throws IOException {
-        try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(USUARIO_XML))) {
-            xmlEncoder.writeObject(usuario);
+    public void gravarusuario(){
+            File usuario = new File("usuario.txt");//arquivo no local do projeto
+        try {
+            if (usuario.exists() == false) {
+                //se não haver esse arquivo ele cria um
+                usuario.createNewFile();
+            }
+
+            File[] usuarios = usuario.listFiles(); //array para guardar as linhas do arquivo
+
+
+            FileWriter fw = new FileWriter(usuario, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+
+            bw.write(nome);
+            bw.newLine(); //adiciona uma linha
+            bw.write(id_usuario);
+            bw.newLine();
+            bw.close();
+            fw.close();
+
+            FileReader fr = new FileReader(usuario);
+            BufferedReader br = new BufferedReader(fr);
+
+            String linha = null;
+            while ((linha = br.readLine()) != null) 
+            if ((br.readLine()).equals(nome))
+              {  
+                if ((br.readLine()).equals(id_usuario))
+                                       
+               }
+           
+            br.close();
+            fr.close();
+           
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
- /*public Usuario verificarUsuario() throws IOException {
-        Usuario usuario = new usuario();
-        File arquivo = new File(USUARIO_XML);
-        if (arquivo.exists()) {
-            try (XMLDecoder xmlDecoder = new XMLDecoder(new FileInputStream(ORTOGRAFIA_XML))) {
-                jogo = (JogoOrtografia) xmlDecoder.readObject();
-            }
-        }    
-*/
-    
+}
+   
     //Metodos
     
     
