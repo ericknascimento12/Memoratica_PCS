@@ -50,6 +50,7 @@ public class Usuario {
     
     public void gravarusuario(){
             File usuario = new File("usuario.txt");//arquivo no local do projeto
+             char usuario_registrado; 
         try {
             if (usuario.exists() == false) {
                 //se não haver esse arquivo ele cria um
@@ -77,7 +78,7 @@ public class Usuario {
             if ((br.readLine()).equals(nome))
               {  
                 if ((br.readLine()).equals(id_usuario))
-                    Partida.inicializarPartida();
+                   usuario_registrado = Partida.selecionaModulo(char usuario);
                 }
            
             br.close();
