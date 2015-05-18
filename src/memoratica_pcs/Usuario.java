@@ -50,7 +50,7 @@ public class Usuario {
             xmlEncoder.writeObject(usuario);
         }
     }
- public Usuario verificarUsuario() throws IOException {
+ /*public Usuario verificarUsuario() throws IOException {
         Usuario usuario = new usuario();
         File arquivo = new File(USUARIO_XML);
         if (arquivo.exists()) {
@@ -58,7 +58,7 @@ public class Usuario {
                 jogo = (JogoOrtografia) xmlDecoder.readObject();
             }
         }    
-
+*/
     
     //Metodos
     
