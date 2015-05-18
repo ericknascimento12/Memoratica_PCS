@@ -5,10 +5,8 @@
  */
 package memoratica_pcs;
 
-import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
-import sun.security.jca.GetInstance;
 
 public class Partida  {
     //atributos

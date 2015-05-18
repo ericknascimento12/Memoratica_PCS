@@ -85,7 +85,7 @@ public class Usuario {
                 br.write(Partida.id_usuario);
                 br.newLine();
         
-            else
+            
                  
         }
                 
@@ -96,7 +96,7 @@ public class Usuario {
             ex.printStackTrace();
         }
     }
-}
+
    
     //Metodos
     
