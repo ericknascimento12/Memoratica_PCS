@@ -71,10 +71,10 @@ public class Partida  {
     
     private void distribuirPecas()
     {
+
        Peca[][] tabuleiro;
         tabuleiro = Tabuleiro.matrizpecas();
-        
-     
+
     Random random = new Random();
 
     for (int i = tabuleiro.length - 1; i > 0; i--) {
@@ -88,12 +88,12 @@ public class Partida  {
             tabuleiro[m][n] = temp;
         }
     
-    
-}
-        
-        
-        
-    }
+        }
+  
+          
+   }
+
+ 
     
     private void selecionarPecas(Peca peca1,Peca peca2)    
     {
@@ -104,7 +104,7 @@ public class Partida  {
            jogada.peca1=peca1;                 
            jogada.peca2=peca2;
            
-        }
+         }
     }
     
     public boolean verificaPar()

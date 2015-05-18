@@ -17,8 +17,15 @@ public class Tabuleiro extends Partida {
     //atributos
     int id_tabuleiro;
     
+
    
  Peca[][] tabuleiro = new Peca[5][4];
+   
+    //construtor    
+
+     
+    
+    
 
 
 char operador=Partida.selecionaModulo();
