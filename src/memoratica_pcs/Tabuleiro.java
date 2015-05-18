@@ -5,7 +5,7 @@
  */
 package memoratica_pcs;
 
-
+import java.util.Scanner;
 import java.util.Random;
 
 

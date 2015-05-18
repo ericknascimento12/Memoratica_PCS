@@ -69,7 +69,7 @@ public class Partida {
         int numero2 = gerador.nextInt();
         
  
-       for(int i=0; i<=Tabuleiro.lenght;i++){
+       abstraia-->>for(int i=0; i<=Tabuleiro.lenght;i++){
         
         switch(operador)
         
@@ -79,6 +79,21 @@ public class Partida {
         case '-': Tabuleiro [i]=numero1-numero2;
         break;
         }
+        
+        
+            ESSA PARTE É O CÓDIGO DA INTERNET:
+        import java.util.Random;
+ 
+public class RandomK19 {
+    public static void main(String[] args)
+    {
+        Random gerador = new Random();
+ 
+        int numero = gerador.nextInt();
+ 
+        System.out.println(numero);
+    }
+}--->>>>TERMINA AQUI
         
     }
 }*/
