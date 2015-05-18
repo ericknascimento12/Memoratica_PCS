@@ -69,7 +69,7 @@ public class Partida {
         int numero2 = gerador.nextInt();
         
  
-       for(int i=0; i<=Tabuleiro.lenght;i++){
+       abstraia-->>for(int i=0; i<=Tabuleiro.lenght;i++){
         
         switch(operador)
         
