@@ -77,8 +77,8 @@ public class Usuario {
             if ((br.readLine()).equals(nome))
               {  
                 if ((br.readLine()).equals(id_usuario))
-                                       
-               }
+                    Partida.inicializarPartida();
+                }
            
             br.close();
             fr.close();
