@@ -23,9 +23,12 @@ public class Usuario {
     }
     //Metodos
     
+    
     public String obterEstatistica(int id_usuario)
     {
        int tempo=0;
+       
+       
        return "";
                
     }
