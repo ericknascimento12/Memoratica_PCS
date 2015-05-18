@@ -63,26 +63,34 @@ public class Usuario {
             FileWriter fw = new FileWriter(usuario, true);
             BufferedWriter bw = new BufferedWriter(fw);
 
-            bw.write(nome);
-            bw.newLine(); //adiciona uma linha
-            bw.write(id_usuario);
-            bw.newLine();
-            bw.close();
-            fw.close();
+          
 
             FileReader fr = new FileReader(usuario);
             BufferedReader br = new BufferedReader(fr);
 
-            String linha = null;
-            while ((linha = br.readLine()) != null) 
-            if ((br.readLine()).equals(nome))
-              {  
-                if ((br.readLine()).equals(id_usuario))
-                   usuario_registrado = Partida.selecionaModulo(char usuario);
-                }
-           
-            br.close();
-            fr.close();
+            
+             String linha = null;
+            while((linha = br.readLine()) != null) {
+             if (br.readLine == nome)
+             { 
+                 Partida.selecionaModulo();
+             }
+             if (br.readLine == id_usuario)
+             {
+                 Partida.selecionaModulo();
+             }
+            else
+                br.write(Partida.nome);
+                br.newLine(); //adiciona uma linha
+                br.write(Partida.id_usuario);
+                br.newLine();
+        
+            else
+                 
+        }
+                
+                    br.close();
+                    fr.close();
            
         } catch (IOException ex) {
             ex.printStackTrace();
