@@ -15,12 +15,13 @@ public class Jogada {
     Peca peca1;
     Peca peca2;
     
+     public Jogada Jogada=new Jogada();
     //Métodos
     
     int ContaJogada(){
         return 0;
 }
-    public Jogada Jogada=new Jogada();
+    
     
     
     

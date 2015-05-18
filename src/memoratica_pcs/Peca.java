@@ -18,7 +18,7 @@ public class Peca {
    boolean virada;
    int resultado;
     //Construtor
-    public Peca()
+    public Peca(char operador)
     {
         virada = false;   
     }

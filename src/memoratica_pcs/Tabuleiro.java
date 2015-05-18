@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package memoratica_pcs;
-import java.util.Scanner;
+
 import java.util.Random;
 /**
  *
@@ -16,10 +16,27 @@ public class Tabuleiro {
     
        
     //construtor    
-public Tabuleiro Tabuleiro [][] = new Tabuleiro[5][4];
+public Peca tabuleiro[][] = new Peca[5][4];
+     
 
+        
+    
 
-
+ 
+private Peca matrizpecas(char operador)
+{
+          
+    for(int i=0;i<5;i++)
+    {
+        for(int j=0;j<4;j++)
+        {
+          Peca peca=new Peca(operador); 
+          this.tabuleiro[i][j]=peca;
+        }
+    }
+        
+   return tabuleiro[5][4];
+}
 
 
   
