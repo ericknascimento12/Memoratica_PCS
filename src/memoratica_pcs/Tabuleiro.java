@@ -21,8 +21,7 @@ public class Tabuleiro {
     //construtor    
 public Peca tabuleiro[][] = new Peca[5][4];
      
-
-        
+    
     
 
  
