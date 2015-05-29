@@ -17,8 +17,15 @@ public class Jogada {
     
      public Jogada Jogada=new Jogada();
     //Métodos
+     
+     
+     
     
-    int ContaJogada(){
+    int ContaJogada(Jogada jogada)
+    {
+        int contador=1;
+         contador=jogada.ContaJogada(jogada);
+         contador++;
         return 0;
 }
     

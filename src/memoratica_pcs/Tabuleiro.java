@@ -29,6 +29,7 @@ public class Tabuleiro extends Partida {
 
 
 char operador=Partida.selecionaModulo();
+//cria as peças, com resultado fixo.
 
  Peca peca1=new Peca(20,operador);
  Peca peca2=new Peca(20,operador);
@@ -54,7 +55,7 @@ char operador=Partida.selecionaModulo();
   
   
     
-     Peca[][] matrizpecas()
+   Peca[][] matrizpecas() //posiciona as peças na matriz
 {
       tabuleiro[0][0]=peca1;
       tabuleiro[1][1]=peca2;

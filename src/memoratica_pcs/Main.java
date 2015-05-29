@@ -20,11 +20,7 @@ public class Main {
      Scanner input = new Scanner(System.in);
      String nome = input.nextLine(); 
 
-//EU GIAN COMENTARIO
-        //COMENTARIO ERICK
-        //comentário Jessica
-     //comentario eu
-     //comentario eu 2
+
     }
-    //teste25
+   
 }
