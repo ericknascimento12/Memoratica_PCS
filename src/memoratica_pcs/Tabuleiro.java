@@ -20,8 +20,8 @@ public class Tabuleiro extends Partida {
     
 
    
-// Peca[][] tabuleiro = new Peca[5][4];
-  ArrayList<Peca> tabuleiro = new ArrayList();
+Peca[][] tabuleiro = new Peca[5][4];
+ // ArrayList<Peca> tabuleiro = new ArrayList();
   
     //construtor    
 
@@ -32,7 +32,7 @@ public class Tabuleiro extends Partida {
 
 char operador=Partida.selecionaModulo();
 //cria as peças, com resultado fixo.
-/*
+
  Peca peca1=new Peca(20,operador);
  Peca peca2=new Peca(20,operador);
  Peca peca3=new Peca(40,operador);
@@ -53,9 +53,8 @@ char operador=Partida.selecionaModulo();
  Peca peca18=new Peca(64,operador);
  Peca peca19=new Peca(6,operador);
  Peca peca20=new Peca(6,operador);
-*/
   
-  /*
+
     
    Peca[][] matrizpecas() //posiciona as peças na matriz
 {
@@ -79,7 +78,7 @@ char operador=Partida.selecionaModulo();
       tabuleiro[2][1]=peca18;
       tabuleiro[3][2]=peca19;
       tabuleiro[4][3]=peca20;
-     */
+
           
    return tabuleiro;
 }
