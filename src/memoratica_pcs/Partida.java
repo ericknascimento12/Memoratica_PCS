@@ -13,7 +13,7 @@ public class Partida  {
     private String id_partida;
     private  int cronometro;
     private int tempo;
-    private Jogada jogada;
+    private Jogada jogada;//Precisa desse atributo?
    Tabuleiro Tabuleiro;
   
 
@@ -35,17 +35,19 @@ public class Partida  {
     }
     private boolean inicializarPartida()
     {
-        if(cronometro==0)
+        distribuirPecas();   //Distribui as peças da partida
+        inicializarCronometro(); //Inicializa o cronometro
+        
+        if(cronometro==0)  // caso o cronometro chegue a 0 a partida acaba(false)
         {
             return false;
         }
         
         return true;
     }
-    public boolean inicializarCronometro()
+    public boolean inicializarCronometro()//inicializa o cronometro
     {    
-     if(inicializarPartida()==true)
-        {        
+           
          cronometro = tempo;  
           try{  
                for (int i = cronometro; i > 0; i--)
@@ -62,16 +64,17 @@ public class Partida  {
             }             
             
           return true;
-        }
-     else
-         return false;
+        
+     
     }
     
-    private void distribuirPecas()
+    private void distribuirPecas() // cria o tabuleiro e distribui as peças
     {
 
-       Peca[][] tabuleiro;
-        tabuleiro = Tabuleiro.matrizpecas();
+       Peca[][] tabuleiro;  // cria uma matriz de peças(tabuleiro)
+      
+       tabuleiro = Tabuleiro.matrizpecas();//posiciona as peças no tabuleiro-"não consegui tabuleiro.matrizpecas()";
+
 
     Random random = new Random();
 
@@ -93,16 +96,23 @@ public class Partida  {
 
  
     
-    private void selecionarPecas(Peca peca1,Peca peca2)    
+    private void selecionarPeca(Peca peca) //desvira a peça   
     {
-        peca1.desvirar();
-        peca2.desvirar();
+        peca.desvirar();
+       
+        
+    }
+    private void jogada(Peca peca1,Peca peca2)// como vou armazenar as peças selecionadas em peça 1 e peça 2??
+    {  
+        
         if((peca1.virada=true) &&(peca2.virada=true))
          {
            jogada.peca1=peca1;                 
            jogada.peca2=peca2;
            
          }
+        
+       
     }
     
     public boolean verificaPar()
