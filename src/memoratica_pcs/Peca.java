@@ -12,30 +12,30 @@ import java.util.Random;
 public class Peca   {
    
     //Atributos
-   int operando1;
-   int operando2;
+    int operando1;
+    int operando2;
     boolean virada;
-   int resultado;
+     int resultado;
    
     //Construtor
     public Peca (int resultado,char operador)
-    {   virada = false;
+    {   this.virada = false;
       
         
     Random rand = new Random();
-        operando1 = rand.nextInt(resultado) + 1;          
+        this.operando1 = rand.nextInt(resultado) + 1;          
         
         if(operador =='+') {
-        operando2=resultado-operando1; 
+        this.operando2=resultado-operando1; 
         
         }
         
         else if(operador == '-'){
-        operando2=resultado+operando1;
+        this.operando2=resultado+operando1;
         }
         
         else if(operador == '/'){
-          operando2=resultado*operando1;
+          this.operando2=resultado*operando1;
           //ao fazer o botão trocar a ordem do operando1 e operando 2 op2/op1=resultado
         }
         
@@ -43,10 +43,10 @@ public class Peca   {
                 
             while(resultado%operando1!=0)
             {
-                operando1=operando1+1;
+                this.operando1=operando1+1;
             }
                                            
-             operando2=resultado/operando1;
+             this.operando2=resultado/operando1;
              
             
           }          

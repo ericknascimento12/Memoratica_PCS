@@ -15,7 +15,10 @@ public class Jogada {
     Peca peca1;
     Peca peca2;
     
-     public Jogada Jogada=new Jogada();
+     public Jogada()
+     {
+         
+     }
     //Métodos
      
      

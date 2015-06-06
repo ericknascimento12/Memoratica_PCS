@@ -11,15 +11,19 @@ import java.util.Scanner;
 public class Partida  {
     //atributos
     private String id_partida;
-    private  int cronometro;
-    private int tempo;
-    private Jogada jogada;//Precisa desse atributo?
-   Tabuleiro Tabuleiro;
+     int cronometro;
+     int tempo;
+     Jogada jogada=new Jogada();//Precisa desse atributo?
+     Tabuleiro Tabuleiro=new Tabuleiro();
   
 
  
     //construtor
-    public Partida Partida=new Partida();
+    public Partida()//Não sei se leva ou não parametros
+    {
+        
+    }
+            
     
     
     //métodos   
@@ -71,22 +75,22 @@ public class Partida  {
     private void distribuirPecas() // cria o tabuleiro e distribui as peças
     {
 
-       Peca[][] tabuleiro;  // cria uma matriz de peças(tabuleiro)
+         // cria uma matriz de peças(tabuleiro)
       
-       tabuleiro = Tabuleiro.matrizpecas();//posiciona as peças no tabuleiro-"não consegui tabuleiro.matrizpecas()";
+       //posiciona as peças no tabuleiro-"não consegui tabuleiro.matrizpecas()";
 
 
     Random random = new Random();
 
-    for (int i = tabuleiro.length - 1; i > 0; i--) {
-        for (int j = tabuleiro[i].length - 1; j > 0; j--) 
+    for (int i = Tabuleiro.tabuleiro.length - 1; i > 0; i--) {
+        for (int j = Tabuleiro.tabuleiro[i].length - 1; j > 0; j--) 
         {
             int m = random.nextInt(i + 1);
             int n = random.nextInt(j + 1);
 
-            Peca temp = tabuleiro[i][j];
-            tabuleiro[i][j] = tabuleiro[m][n];
-            tabuleiro[m][n] = temp;
+            Peca temp = Tabuleiro.tabuleiro[i][j];
+            Tabuleiro.tabuleiro[i][j] = Tabuleiro.tabuleiro[m][n];
+            Tabuleiro.tabuleiro[m][n] = temp;
         }
     
         }
@@ -110,12 +114,11 @@ public class Partida  {
            jogada.peca1=peca1;                 
            jogada.peca2=peca2;
            
-         }
-        
-       
+         }        
+       verificaPar();
     }
     
-    public boolean verificaPar()
+    public boolean verificaPar() // verifica  se as pecas da jogada tem mesmo 
     { 
         if(jogada.peca1.resultado==jogada.peca2.resultado)
         {
@@ -125,13 +128,11 @@ public class Partida  {
             return false;
     }
     
-    public void verificaTempo(int tempoF)
+    public void verificaTempo()// verifica o tempo que o jogador levou para ganhar
     {
-        tempoF=tempo-cronometro;
+        int tempoF=tempo-cronometro;
         System.out.println("Tempo gasto:"+ tempoF);
-        
-        inicializarPartida(); //não consegui botar como false            
-        
+         
     }
    
 }

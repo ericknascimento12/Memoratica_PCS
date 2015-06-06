@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package memoratica_pcs;
+import java.util.ArrayList;
 import java.util.Scanner;
 /**
  *
