@@ -14,12 +14,14 @@ public class Peca   {
     //Atributos
     int operando1;
     int operando2;
-    boolean virada;
-     int resultado;
+    boolean virada;// peça esta virada ou não
+     int resultado;//resultado da operação
    
     //Construtor
     public Peca (int resultado,char operador)
-    {   this.virada = false;
+    {   /*algoritimo de criação dos operando em cima do valor do resultado*/
+        
+        this.virada = false;
       
         
     Random rand = new Random();

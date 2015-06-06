@@ -28,7 +28,7 @@ public class Partida  {
     
     //métodos   
     
-    public static char selecionaModulo(/*char operador*/)
+    public static char selecionaModulo(/*char operador*/)//<== quando clicar no botão ira enviar como paramentro esse char operador
     {  
         Scanner reader = new Scanner(System.in);
     System.out.println("Digite o modulo: ");
@@ -72,12 +72,8 @@ public class Partida  {
      
     }
     
-    private void distribuirPecas() // cria o tabuleiro e distribui as peças
+    private void distribuirPecas() //embaralha as peças no tabuleiro
     {
-
-         // cria uma matriz de peças(tabuleiro)
-      
-       //posiciona as peças no tabuleiro-"não consegui tabuleiro.matrizpecas()";
 
 
     Random random = new Random();
