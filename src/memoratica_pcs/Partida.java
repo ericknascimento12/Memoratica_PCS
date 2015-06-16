@@ -19,7 +19,7 @@ public class Partida  {
 
  
     //construtor
-    public Partida()//Não sei se leva ou não parametros
+    public Partida()//Não sei se leva ou não parametros, pensei em botar o modulo como atributo no caso do botão
     {
         
     }
@@ -30,7 +30,7 @@ public class Partida  {
     
     public static char selecionaModulo(/*char operador*/)//<== quando clicar no botão ira enviar como paramentro esse char operador
     {  
-        Scanner reader = new Scanner(System.in);
+        Scanner reader = new Scanner(System.in); //não consegui encontrar uma maneira de botar o botão como parametro
     System.out.println("Digite o modulo: ");
     char operador = reader.next().charAt(0);
         
