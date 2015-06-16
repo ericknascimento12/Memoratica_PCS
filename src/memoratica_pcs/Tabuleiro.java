@@ -20,8 +20,10 @@ public class Tabuleiro extends Partida {
     
   Peca[][] tabuleiro = new Peca[5][4];// cria matriz de peças 
    char operador=Partida.selecionaModulo();//seleciona o operador
-    public  Tabuleiro() //recebe parametros?
- {   int cont=0;
+   
+   public  Tabuleiro() //recebe parametros?
+ {   
+       int cont=0;
      int[] resultados = null;//vetor de resultados  
      ///////////////////////Lista Numeros///////////////////////
      ArrayList<Integer> numeros = new ArrayList();  //lista com valores de 0~100 
@@ -30,13 +32,11 @@ public class Tabuleiro extends Partida {
         numeros.add(i);  
     }    
       
-    Collections.shuffle(numeros);  //Embaralhamos os resultados:
-   
+    Collections.shuffle(numeros);  //Embaralhamos os resultados:   
     for (int i = 0; i < 10; i++)  //Pegamos 10 aleatórios  
     {  
-       resultados[i]=(numeros.get(i));  
-    }  
-    
+       resultados[i]=(numeros.get(i));
+    }      
     int[] resultadosB = resultados.clone();//cria copia com os resultados
     
 ///////////////////////Lista Peças/////////////////////////
@@ -45,12 +45,12 @@ public class Tabuleiro extends Partida {
       {
             pecas.add(new Peca(resultados[i], operador));
             i++;
-     }
+      }
     for (int i=0;i < 10;i++) 
       {
             pecas.add(new Peca(resultadosB[i], operador));//armazenas os 10 resultados restantes
             i++;
-     }
+      }
  
  for(int i=0;i<5;i++)
  {
@@ -62,7 +62,6 @@ public class Tabuleiro extends Partida {
  
 
  }
-
 
       
   

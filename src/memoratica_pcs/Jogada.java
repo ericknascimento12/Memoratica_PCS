@@ -19,11 +19,9 @@ public class Jogada {
      {
          
      }
-    //Métodos
-     
-     
-     
     
+
+//Métodos 
     int ContaJogada(Jogada jogada)
     {
         int contador=1;
