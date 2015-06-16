@@ -157,6 +157,7 @@ public class Menu extends javax.swing.JFrame {
      char modulo='-'; //decide o modulo
      Mesa Mesa=new Mesa(modulo); // cria novo tabuleiro
      Mesa.setVisible(true); // frame mesa
+     // falta botar o seleciona modulo como esse modulo
     }//GEN-LAST:event_subtraçãoActionPerformed
 
     private void somaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_somaActionPerformed
