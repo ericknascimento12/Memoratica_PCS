@@ -28,12 +28,13 @@ public class QualquerClasse {
         }
         
         
-        public void salvarJogo(Partida jogo) throws IOException {
+     /*   public void salvarJogo(Partida jogo) throws IOException {
         try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(USERDATA_XML))) {
             xmlEncoder.writeObject(jogo);
         }
-    }
+    }*/
     
+   /*
     public Partida recuperarJogo() throws IOException {
         Partida jogo = new Partida();
         File arquivo = new File(USERDATA_XML);
@@ -44,9 +45,9 @@ public class QualquerClasse {
         }    
         return jogo;
     }
-}
+}*/
 
-        
+     
         
     }
 }
