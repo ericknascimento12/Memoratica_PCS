@@ -6,7 +6,7 @@
 
 package leitura_arquivo;
 
-/*
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import memoratica_pcs.Usuario;
 
-*/
+
 
 
 
@@ -24,11 +24,12 @@ import memoratica_pcs.Usuario;
  * @author LABCCET
  */
 public class QualquerCoisa {
-       /* private List<Usuario> ListaUsuarios;
+        private List<Usuario> ListaUsuarios;
         private Usuario usuario;
         
         public List<Usuario> importarUsuarios(File arquivo) throws IOException {
         BufferedReader reader = null;
+       
         ListaUsuarios = new ArrayList<>();
         try{
             reader = new BufferedReader (new FileReader(arquivo));
@@ -40,7 +41,8 @@ public class QualquerCoisa {
                 reader.close();
             }
         }
-        return resultado;
-    }*/
+        return ListaUsuarios;
+        
+    }
         
 }

@@ -18,20 +18,24 @@ import memoratica_pcs.Partida;
  *
  * @author LABCCET
  */
-public class QualquerClasse {
- 
-        private static final String USERDATA_XML = "userdata.xml";
-        
-            public void salvarJogo(Partida partida) throws IOException {
-        try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(USERDATA_XML))) {
-            xmlEncoder.writeObject(partida);
-        }
-        
-        
-        public void salvarJogo(Partida jogo) throws IOException {
-        try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(USERDATA_XML))) {
+public class QualquerClasse {/*
+    private static final String ORTOGRAFIA_XML = "ortografia.xml";
+    
+    public OrtografiaDatabase() {
+    }
+
+    public void salvarJogo(JogoOrtografia jogo) throws IOException {
+        try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(ORTOGRAFIA_XML))) {
             xmlEncoder.writeObject(jogo);
         }
+    }
+    */
+        private static final String USERDATA_XML = "userdata.xml";
+        
+            public void salvarJogo(Usuario usuario) throws IOException {
+        try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(USERDATA_XML))) {
+            xmlEncoder.writeObject(usuario);
+        }     
     }
     
     public Partida recuperarJogo() throws IOException {
