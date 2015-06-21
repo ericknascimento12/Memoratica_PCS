@@ -34,7 +34,7 @@ public class QualquerCoisa {
         try{
             reader = new BufferedReader (new FileReader(arquivo));
             while (reader.ready()) {
-                (reader.readLine());
+                reader.readLine();
             }
         } finally {
             if (reader != null) {
