@@ -37,20 +37,21 @@ public class Usuario {
     private int id_usuario;
     private String nome;
     private char modulo_liberado;
- //   private static final String USUARIO_XML = "usuario.xml";
+    Partida partida;
+    partida.verificaTempo();
 
     
-    //Construtor
-    public Usuario (String nome,int id_usuario)
-    {
-        this.nome=nome;
-        this.id_usuario=id_usuario;
-
+    public Usuario(int id_usuario, String nome, char modulo_liberado, Partida partida) {
+        this.id_usuario = id_usuario;
+        this.nome = nome;
+        this.modulo_liberado = modulo_liberado;
+        this.partida = partida;
     }
-    
-    public void gravarusuario(){
-            File usuario = new File("usuario.txt");//arquivo no local do projeto
-             char usuario_registrado; 
+ //   private static final String USUARIO_XML = "usuario.xml";
+    //Construtor
+    public void gravarusuario() {
+        File usuario = new File("usuario.txt");//arquivo no local do projeto
+        char usuario_registrado;
         try {
             if (usuario.exists() == false) {
                 //se não haver esse arquivo ele cria um
@@ -58,56 +59,54 @@ public class Usuario {
             }
 
             File[] usuarios = usuario.listFiles(); //array para guardar as linhas do arquivo
-
-
+            
+            
             FileWriter fw = new FileWriter(usuario, true);
             BufferedWriter bw = new BufferedWriter(fw);
-
-          
-
+            
+            
+            
             FileReader fr = new FileReader(usuario);
             BufferedReader br = new BufferedReader(fr);
-
             
-             String linha = null;
+
+            String linha = null;
             while((linha = br.readLine()) != null) {
-             if (br.readLine == nome)
-             { 
-                 Partida.selecionaModulo();
-             }
-             if (br.readLine == id_usuario)
-             {
-                 Partida.selecionaModulo();
-             }
-            else
-                br.write(Partida.nome);
+                if (br.readLine == nome)
+                {
+                    Partida.selecionaModulo();
+                }
+                if (br.readLine == id_usuario)
+                {
+                    Partida.selecionaModulo();
+                }
+                else
+                    br.write(Partida.nome);
                 br.newLine(); //adiciona uma linha
                 br.write(Partida.id_usuario);
                 br.newLine();
-        
+            }
             
-                 
-        }
-                
-                    br.close();
-                    fr.close();
-           
+            br.close();
+            fr.close();
+            
         } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
-
-   
     //Metodos
-    
-    
-    public String obterEstatistica(int id_usuario)
-    {
-       int tempo=0;
-       
-       
-       return "";
-               
+    /*
+    public class Usuario{
+    private static final int ESTATISTICA_XML="Estatistica.xml";
+    public Usuario(){
+    public void
     }
+    }
+     */
+    
+    
+    
+    
+  
     
 }

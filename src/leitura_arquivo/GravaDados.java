@@ -23,7 +23,7 @@ import memoratica_pcs.Usuario;
  *
  * @author LABCCET
  */
-public class QualquerCoisa {
+public class GravaDados {
         private List<Usuario> ListaUsuarios;
         private Usuario usuario;
         

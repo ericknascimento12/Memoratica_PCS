@@ -18,18 +18,8 @@ import memoratica_pcs.Partida;
  *
  * @author LABCCET
  */
-public class QualquerClasse {/*
-    private static final String ORTOGRAFIA_XML = "ortografia.xml";
+public class ImportaDados {
     
-    public OrtografiaDatabase() {
-    }
-
-    public void salvarJogo(JogoOrtografia jogo) throws IOException {
-        try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(ORTOGRAFIA_XML))) {
-            xmlEncoder.writeObject(jogo);
-        }
-    }
-    */
         private static final String USERDATA_XML = "userdata.xml";
         
             public void salvarJogo(Usuario usuario) throws IOException {
