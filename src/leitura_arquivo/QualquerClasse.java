@@ -20,26 +20,26 @@ import memoratica_pcs.Partida;
  */
 public class QualquerClasse {
  
-        private static final String ESTATISTICA_XML = "estatistica.xml";
+        private static final String USERDATA_XML = "userdata.xml";
         
             public void salvarJogo(Partida partida) throws IOException {
-        try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(ESTATISTICA_XML))) {
+        try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(USERDATA_XML))) {
             xmlEncoder.writeObject(partida);
         }
         
         
         public void salvarJogo(Partida jogo) throws IOException {
-        try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(ESTATISTICA_XML))) {
+        try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(USERDATA_XML))) {
             xmlEncoder.writeObject(jogo);
         }
     }
     
     public Partida recuperarJogo() throws IOException {
-        Partida jogo = new JogoOrtografia();
-        File arquivo = new File(ORTOGRAFIA_XML);
+        Partida jogo = new Partida();
+        File arquivo = new File(USERDATA_XML);
         if (arquivo.exists()) {
-            try (XMLDecoder xmlDecoder = new XMLDecoder(new FileInputStream(ORTOGRAFIA_XML))) {
-                jogo = (JogoOrtografia) xmlDecoder.readObject();
+            try (XMLDecoder xmlDecoder = new XMLDecoder(new FileInputStream(USERDATA_XML))) {
+                jogo = (Partida) xmlDecoder.readObject();
             }
         }    
         return jogo;
