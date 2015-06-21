@@ -4,13 +4,14 @@
  * and open the template in the editor.
  */
 package memoratica_pcs;
+import Interface.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 /**
  *
  * @author Gian
  */
-public class Main {
+public class Main_1 {
 
     /**
      * @param args the command line arguments

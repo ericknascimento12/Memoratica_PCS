@@ -5,10 +5,11 @@
  */
 package memoratica_pcs;
 
+import Interface.*;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Partida  {
+public class Partida_1  {
     //atributos
     private String id_partida;
      int cronometro;
@@ -19,7 +20,7 @@ public class Partida  {
 
  
     //construtor
-    public Partida()//Não sei se leva ou não parametros, pensei em botar o modulo como atributo no caso do botão
+    public Partida_1()//Não sei se leva ou não parametros, pensei em botar o modulo como atributo no caso do botão
     {
         
     }
@@ -114,7 +115,7 @@ public class Partida  {
        verificaPar();
     }
     
-    public boolean verificaPar() // verifica  se as pecas da jogada tem mesmo 
+    public boolean verificaPar() // verifica  se as pecas da jogada tem mesmo  resultado
     { 
         if(jogada.peca1.resultado==jogada.peca2.resultado)
         {
