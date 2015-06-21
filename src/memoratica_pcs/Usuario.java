@@ -47,10 +47,11 @@ public class Usuario {
         this.modulo_liberado = modulo_liberado;
         this.partida = partida;
     }
+    
  //   private static final String USUARIO_XML = "usuario.xml";
     //Construtor
     
-    /*
+/*
     public void gravarusuario() {
         File usuario = new File("usuario.txt");//arquivo no local do projeto
         char usuario_registrado;
@@ -95,7 +96,8 @@ public class Usuario {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-    }*/
+    }
+    */
     //Metodos
     /*
     public class Usuario{
