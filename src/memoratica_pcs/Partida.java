@@ -5,11 +5,10 @@
  */
 package memoratica_pcs;
 
-import Interface.*;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Partida_1  {
+public class Partida  {
     //atributos
     private String id_partida;
      int cronometro;
@@ -20,7 +19,7 @@ public class Partida_1  {
 
  
     //construtor
-    public Partida_1()//Não sei se leva ou não parametros, pensei em botar o modulo como atributo no caso do botão
+    public Partida()//Não sei se leva ou não parametros, pensei em botar o modulo como atributo no caso do botão
     {
         
     }

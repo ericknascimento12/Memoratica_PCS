@@ -5,26 +5,24 @@
  */
 package memoratica_pcs;
 
-import Interface.*;
-
 /**
  *
  * @author Erick
  */
-public class Jogada_1 {
+public class Jogada {
     
     //Atributo
     Peca peca1;
     Peca peca2;
     
-     public Jogada_1()
+     public Jogada()
      {
          
      }
     
 
 //Métodos 
-    int ContaJogada(Jogada_1 jogada)
+    int ContaJogada(Jogada jogada)
     {
         int contador=1;
          contador=jogada.ContaJogada(jogada);

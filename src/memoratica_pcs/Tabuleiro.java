@@ -16,13 +16,13 @@ import java.util.Scanner;
  *
  * @author Gian
  */
-public class Tabuleiro_1 extends Partida {
+public class Tabuleiro extends Partida {
     //atributos
     
   Peca[][] tabuleiro = new Peca[5][4];// cria matriz de peças 
    char operador=Partida.selecionaModulo();//seleciona o operador
    
-   public  Tabuleiro_1() //recebe parametros?
+   public  Tabuleiro() //recebe parametros?
  {   
        int cont=0;
      int[] resultados = null;//vetor de resultados  

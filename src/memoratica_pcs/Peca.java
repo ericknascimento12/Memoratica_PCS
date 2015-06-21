@@ -4,13 +4,12 @@
  * and open the template in the editor.
  */
 package memoratica_pcs;
-import Interface.*;
 import java.util.Random;
 /**
  *
  * @author Gian
  */
-public class Peca_1   {
+public class Peca   {
    
     //Atributos
     int operando1;
@@ -19,7 +18,7 @@ public class Peca_1   {
      int resultado;//resultado da operação
    
     //Construtor
-    public Peca_1 (int resultado,char operador)
+    public Peca (int resultado,char operador)
     {   /*algoritimo de criação dos operando em cima do valor do resultado*/
         
         this.virada = false;
