@@ -38,7 +38,7 @@ public class Usuario {
     private String nome;
     private char modulo_liberado;
     Partida partida;
-    partida.verificaTempo();
+  
 
     
     public Usuario(int id_usuario, String nome, char modulo_liberado, Partida partida) {
@@ -49,6 +49,8 @@ public class Usuario {
     }
  //   private static final String USUARIO_XML = "usuario.xml";
     //Construtor
+    
+    /*
     public void gravarusuario() {
         File usuario = new File("usuario.txt");//arquivo no local do projeto
         char usuario_registrado;
@@ -93,7 +95,7 @@ public class Usuario {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-    }
+    }*/
     //Metodos
     /*
     public class Usuario{
@@ -103,6 +105,38 @@ public class Usuario {
     }
     }
      */
+
+    public int getId_usuario() {
+        return id_usuario;
+    }
+
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public char getModulo_liberado() {
+        return modulo_liberado;
+    }
+
+    public void setModulo_liberado(char modulo_liberado) {
+        this.modulo_liberado = modulo_liberado;
+    }
+
+    public Partida getPartida() {
+        return partida;
+    }
+
+    public void setPartida(Partida partida) {
+        this.partida = partida;
+    }
     
     
     
