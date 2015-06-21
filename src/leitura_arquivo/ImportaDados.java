@@ -6,41 +6,43 @@
 
 package leitura_arquivo;
 
-import java.beans.XMLDecoder;
-import java.beans.XMLEncoder;
+
+import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
-import memoratica_pcs.Partida;
+import java.util.ArrayList;
+import java.util.List;
+import memoratica_pcs.Usuario;
+
+
+
+
 
 /**
  *
  * @author LABCCET
  */
 public class ImportaDados {
-    
-        private static final String USERDATA_XML = "userdata.xml";
+        private List<Usuario> ListaUsuarios;
+        private Usuario usuario;
         
-            public void salvarJogo(Usuario usuario) throws IOException {
-        try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(USERDATA_XML))) {
-            xmlEncoder.writeObject(usuario);
-        }     
-    }
-    
-    public Partida recuperarJogo() throws IOException {
-        Partida jogo = new Partida();
-        File arquivo = new File(USERDATA_XML);
-        if (arquivo.exists()) {
-            try (XMLDecoder xmlDecoder = new XMLDecoder(new FileInputStream(USERDATA_XML))) {
-                jogo = (Partida) xmlDecoder.readObject();
+        public List<Usuario> importarUsuarios(File arquivo) throws IOException {
+        BufferedReader reader = null;
+       
+        ListaUsuarios = new ArrayList<>();
+        try{
+            reader = new BufferedReader (new FileReader(arquivo));
+            while (reader.ready()) {
+                reader.readLine();
             }
-        }    
-        return jogo;
-    }
-}
-
+        } finally {
+            if (reader != null) {
+                reader.close();
+            }
+        }
+        return ListaUsuarios;
         
-        
     }
+        
 }
