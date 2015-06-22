@@ -114,7 +114,7 @@ public class Partida  {
        verificaPar();
     }
     
-    public boolean verificaPar() // verifica  se as pecas da jogada tem mesmo 
+    public boolean verificaPar() // verifica  se as pecas da jogada tem mesmo  resultado
     { 
         if(jogada.peca1.resultado==jogada.peca2.resultado)
         {

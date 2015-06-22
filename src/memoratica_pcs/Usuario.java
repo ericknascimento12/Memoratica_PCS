@@ -29,26 +29,61 @@ import java.util.logging.Logger;
 
 
 
-
-
-
 public class Usuario {
      // Atributos
-    private int id_usuario;
+    
     private String nome;
     private char modulo_liberado;
     Partida partida;
-  
+ /* 
+public static obterTempo(Partida partida){
 
+return partida.verificaTempo();
+}
+*/
     
-    public Usuario(int id_usuario, String nome, char modulo_liberado, Partida partida) {
-        this.id_usuario = id_usuario;
+    public Usuario( String nome, char modulo_liberado, Partida partida) {
+       
         this.nome = nome;
         this.modulo_liberado = modulo_liberado;
         this.partida = partida;
     }
     
- //   private static final String USUARIO_XML = "usuario.xml";
+
+    public int getId_usuario() {
+        return id_usuario;
+    }
+
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public char getModulo_liberado() {
+        return modulo_liberado;
+    }
+
+    public void setModulo_liberado(char modulo_liberado) {
+        this.modulo_liberado = modulo_liberado;
+    }
+
+    public Partida getPartida() {
+        return partida;
+    }
+
+    public void setPartida(Partida partida) {
+        this.partida = partida;
+    }
+    
+    
+     //   private static final String USUARIO_XML = "usuario.xml";
     //Construtor
     
 /*
@@ -93,6 +128,21 @@ public class Usuario {
             br.close();
             fr.close();
             
+=======
+ 
+    //Construtor
+    public Usuario (String nome,int id_usuario)
+    {
+        this.nome=nome;
+        this.id_usuario=id_usuario;
+
+    }
+    
+     
+                    br.close();
+                    fr.close();
+           
+>>>>>>> origin/master
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -107,41 +157,6 @@ public class Usuario {
     }
     }
      */
-
-    public int getId_usuario() {
-        return id_usuario;
-    }
-
-    public void setId_usuario(int id_usuario) {
-        this.id_usuario = id_usuario;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public char getModulo_liberado() {
-        return modulo_liberado;
-    }
-
-    public void setModulo_liberado(char modulo_liberado) {
-        this.modulo_liberado = modulo_liberado;
-    }
-
-    public Partida getPartida() {
-        return partida;
-    }
-
-    public void setPartida(Partida partida) {
-        this.partida = partida;
-    }
-    
-    
-    
     
   
     

@@ -18,6 +18,7 @@ import memoratica_pcs.Partida;
  *
  * @author LABCCET
  */
+
 public class GravaDadosXML {
     
    private static final String USERDATA_XML = "userdata.xml";
@@ -28,7 +29,24 @@ public class GravaDadosXML {
             xmlEncoder.writeObject(usuario);
         }     
     }
-    
+
+public class QualquerClasse {
+ 
+        private static final String USERDATA_XML = "userdata.xml";
+        
+            public void salvarJogo(Partida partida) throws IOException {
+        try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(USERDATA_XML))) {
+            xmlEncoder.writeObject(partida);
+        }
+        
+        
+     /*   public void salvarJogo(Partida jogo) throws IOException {
+        try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(USERDATA_XML))) {
+            xmlEncoder.writeObject(jogo);
+        }
+    }*/
+
+   /*
     public Partida recuperarJogo() throws IOException {
         Usuario usuario = new Usuario();
         File arquivo = new File(USERDATA_XML);
@@ -39,7 +57,7 @@ public class GravaDadosXML {
         }    
         return usuario;
     }
-}
+}*/
 
 
 
