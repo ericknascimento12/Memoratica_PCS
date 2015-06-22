@@ -5,6 +5,7 @@
  */
 package Interface;
 
+import javax.swing.JButton;
 import memoratica_pcs.Partida;
 
 /**
@@ -17,10 +18,33 @@ public class Mesa extends javax.swing.JFrame {
      * Creates new form Mesa
      */
     public Mesa(char modulo) {
-        initComponents();
-       //Partida Partida=new Partida();   deu  erro
-        
-        
+       Partida Partida1=new Partida(modulo);
+       initComponents();
+      
+       
+       jButton1.setText(" "+Partida1.getTabuleiro().tabuleiro[0][0].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[0][0].getOperando1()); 
+       jButton2.setText(" "+Partida1.getTabuleiro().tabuleiro[0][1].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[0][1].getOperando1());
+       jButton3.setText(" "+Partida1.getTabuleiro().tabuleiro[0][2].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[0][2].getOperando1());
+       jButton4.setText(" "+Partida1.getTabuleiro().tabuleiro[0][3].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[0][3].getOperando1());
+       jButton5.setText(" "+Partida1.getTabuleiro().tabuleiro[1][0].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[1][0].getOperando1());
+       jButton6.setText(" "+Partida1.getTabuleiro().tabuleiro[1][1].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[1][1].getOperando1());
+       jButton7.setText(" "+Partida1.getTabuleiro().tabuleiro[1][2].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[1][2].getOperando1());
+       jButton8.setText(" "+Partida1.getTabuleiro().tabuleiro[1][3].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[1][3].getOperando1());
+       jButton9.setText(" "+Partida1.getTabuleiro().tabuleiro[2][0].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[2][0].getOperando1());
+       jButton10.setText(" "+Partida1.getTabuleiro().tabuleiro[2][1].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[2][1].getOperando1());
+       jButton11.setText(" "+Partida1.getTabuleiro().tabuleiro[2][2].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[2][2].getOperando1());
+       jButton12.setText(" "+Partida1.getTabuleiro().tabuleiro[2][3].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[2][3].getOperando1());
+       jButton13.setText(" "+Partida1.getTabuleiro().tabuleiro[3][0].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[3][0].getOperando1());
+       jButton14.setText(" "+Partida1.getTabuleiro().tabuleiro[3][1].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[3][1].getOperando1());
+       jButton15.setText(" "+Partida1.getTabuleiro().tabuleiro[3][2].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[3][2].getOperando1());
+       jButton16.setText(" "+Partida1.getTabuleiro().tabuleiro[3][3].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[3][3].getOperando1());
+       jButton17.setText(" "+Partida1.getTabuleiro().tabuleiro[4][0].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[4][0].getOperando1());
+       jButton18.setText(" "+Partida1.getTabuleiro().tabuleiro[4][1].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[4][1].getOperando1());
+       jButton19.setText(" "+Partida1.getTabuleiro().tabuleiro[4][2].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[4][2].getOperando1());
+       jButton20.setText(" "+Partida1.getTabuleiro().tabuleiro[4][3].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[4][3].getOperando1());
+
+       
+       
         
     }
 
@@ -57,7 +81,7 @@ public class Mesa extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("sfas1");
 
         jButton2.setText("jButton2");
 
@@ -150,13 +174,14 @@ public class Mesa extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
-                .addGap(32, 32, 32)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton3)
+                        .addComponent(jButton4)
+                        .addComponent(jButton5)
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton6)
                     .addComponent(jButton7)
@@ -198,28 +223,7 @@ public class Mesa extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Mesa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Mesa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Mesa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Mesa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+        
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
