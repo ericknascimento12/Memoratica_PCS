@@ -23,7 +23,10 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="26" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -43,167 +46,143 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="BotaoP1" min="-2" pref="87" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="BotaoP2" min="-2" pref="87" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="BotaoP3" min="-2" pref="87" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="BotaoP4" min="-2" pref="87" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="BotaoP17" min="-2" pref="84" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="BotaoP18" min="-2" pref="84" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="BotaoP19" min="-2" pref="84" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="BotaoP20" min="-2" pref="84" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="BotaoP5" min="-2" pref="87" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="BotaoP6" min="-2" pref="87" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="BotaoP7" min="-2" pref="87" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="BotaoP8" min="-2" pref="87" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="BotaoP17" min="-2" pref="87" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="BotaoP18" min="-2" pref="87" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="BotaoP19" min="-2" pref="87" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="BotaoP9" min="-2" pref="87" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="BotaoP10" min="-2" pref="87" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="BotaoP11" min="-2" pref="87" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="BotaoP13" min="-2" pref="87" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="BotaoP14" min="-2" pref="87" max="-2" attributes="0"/>
-                                                  <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="BotaoP15" min="-2" pref="87" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="BotaoP16" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
-                                      <Component id="BotaoP20" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
-                                      <Component id="BotaoP12" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                          <Component id="BotaoP13" min="-2" pref="84" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="BotaoP14" min="-2" pref="84" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="BotaoP15" min="-2" pref="84" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="BotaoP16" min="-2" pref="84" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="BotaoP9" min="-2" pref="84" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="BotaoP10" min="-2" pref="84" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                              <Component id="BotaoP11" min="-2" pref="84" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="BotaoP12" min="-2" pref="84" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="279" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="BotaoP5" min="-2" pref="84" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="BotaoP6" min="-2" pref="84" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                              <Component id="BotaoP7" min="-2" pref="84" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="BotaoP8" min="-2" pref="84" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="BotaoP1" min="-2" pref="84" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="BotaoP2" min="-2" pref="84" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                              <Component id="BotaoP3" min="-2" pref="84" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="BotaoP4" min="-2" pref="84" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
+                  <EmptySpace pref="126" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="BotaoP1" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                      <Component id="BotaoP2" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                      <Component id="BotaoP3" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                      <Component id="BotaoP4" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="BotaoP5" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                      <Component id="BotaoP6" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                      <Component id="BotaoP7" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                      <Component id="BotaoP8" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="BotaoP4" min="-2" pref="115" max="-2" attributes="0"/>
+                      <Component id="BotaoP3" min="-2" pref="115" max="-2" attributes="0"/>
+                      <Component id="BotaoP2" min="-2" pref="115" max="-2" attributes="0"/>
+                      <Component id="BotaoP1" min="-2" pref="115" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="BotaoP9" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                      <Component id="BotaoP10" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                      <Component id="BotaoP11" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                      <Component id="BotaoP12" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="BotaoP8" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                      <Component id="BotaoP7" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                      <Component id="BotaoP6" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                      <Component id="BotaoP5" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="BotaoP13" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                      <Component id="BotaoP14" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                      <Component id="BotaoP15" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                      <Component id="BotaoP16" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="BotaoP12" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                      <Component id="BotaoP11" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                      <Component id="BotaoP10" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                      <Component id="BotaoP9" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="BotaoP17" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                      <Component id="BotaoP18" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                      <Component id="BotaoP19" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
-                      <Component id="BotaoP20" alignment="3" min="-2" pref="93" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="BotaoP16" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                      <Component id="BotaoP15" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                      <Component id="BotaoP14" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                      <Component id="BotaoP13" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="176" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="BotaoP20" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                      <Component id="BotaoP19" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                      <Component id="BotaoP18" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                      <Component id="BotaoP17" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="44" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JToggleButton" name="BotaoP1">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotaoP1ActionPerformed"/>
-          </Events>
+        <Component class="javax.swing.JButton" name="BotaoP1">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP3">
+        <Component class="javax.swing.JButton" name="BotaoP2">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP4">
+        <Component class="javax.swing.JButton" name="BotaoP3">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP5">
+        <Component class="javax.swing.JButton" name="BotaoP4">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP2">
+        <Component class="javax.swing.JButton" name="BotaoP5">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP8">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotaoP8ActionPerformed"/>
-          </Events>
+        <Component class="javax.swing.JButton" name="BotaoP6">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP6">
+        <Component class="javax.swing.JButton" name="BotaoP7">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP7">
+        <Component class="javax.swing.JButton" name="BotaoP8">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP11">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotaoP11ActionPerformed"/>
-          </Events>
+        <Component class="javax.swing.JButton" name="BotaoP9">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP12">
+        <Component class="javax.swing.JButton" name="BotaoP10">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP13">
+        <Component class="javax.swing.JButton" name="BotaoP11">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP10">
+        <Component class="javax.swing.JButton" name="BotaoP12">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP16">
+        <Component class="javax.swing.JButton" name="BotaoP13">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP14">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotaoP14ActionPerformed"/>
-          </Events>
+        <Component class="javax.swing.JButton" name="BotaoP14">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP15">
+        <Component class="javax.swing.JButton" name="BotaoP15">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP9">
+        <Component class="javax.swing.JButton" name="BotaoP16">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP17">
+        <Component class="javax.swing.JButton" name="BotaoP17">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP20">
+        <Component class="javax.swing.JButton" name="BotaoP18">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP18">
+        <Component class="javax.swing.JButton" name="BotaoP19">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="BotaoP19">
+        <Component class="javax.swing.JButton" name="BotaoP20">
         </Component>
       </SubComponents>
     </Container>
