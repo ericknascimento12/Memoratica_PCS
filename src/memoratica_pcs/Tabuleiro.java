@@ -53,11 +53,12 @@ public class Tabuleiro {
                 tabuleiro[i][j] = pecas.get(cont++);//armazena a peca na posicÃ£o do tabuleiro
             }
         }
-        
+
         this.distribuirPecas(); //toda vez que uma novo tabuleiro for criado as pecas sao distribuidas
 
     }
-private void distribuirPecas() //embaralha as pecas no tabuleiro ( jogar para o tabuleiro)
+
+    private void distribuirPecas() //embaralha as pecas no tabuleiro ( jogar para o tabuleiro)
     {
 
         Random random = new Random();
@@ -70,16 +71,14 @@ private void distribuirPecas() //embaralha as pecas no tabuleiro ( jogar para o 
                 Peca temp = tabuleiro[i][j];
                 tabuleiro[i][j] = tabuleiro[m][n];
                 tabuleiro[m][n] = temp;
-                
+
             }
 
         }
 
     }
 
-
-public Peca getPeca(int i,int j)
-{
-    return tabuleiro[i][j];
-}
+    public Peca getPeca(int i, int j) {
+        return tabuleiro[i][j];
+    }
 }

@@ -16,18 +16,14 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu(String texto) {
         initComponents();
-        MenuL.setText("Bem vindo(a) "+texto);
-        
-        
-        
+        MenuL.setText("Bem vindo(a) " + texto);
+
     }
 
     private Menu() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    
-    }
 
-   
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -153,32 +149,32 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void subtraçãoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtraçãoActionPerformed
-     this.setVisible(false);  //esconde o menu
-     char modulo='-'; //decide o modulo
-     Mesa Mesa=new Mesa(modulo); // cria novo tabuleiro
-     Mesa.setVisible(true); // frame mesa
-     // falta botar o seleciona modulo como esse modulo
+        this.setVisible(false);  //esconde o menu
+        char modulo = '-'; //decide o modulo
+        Mesa Mesa = new Mesa(modulo); // cria novo tabuleiro
+        Mesa.setVisible(true); // frame mesa
+        // falta botar o seleciona modulo como esse modulo
     }//GEN-LAST:event_subtraçãoActionPerformed
 
     private void somaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_somaActionPerformed
-     this.setVisible(false);
-     char modulo='+';
-     Mesa Mesa=new Mesa(modulo);
-     Mesa.setVisible(true);
+        this.setVisible(false);
+        char modulo = '+';
+        Mesa Mesa = new Mesa(modulo);
+        Mesa.setVisible(true);
     }//GEN-LAST:event_somaActionPerformed
 
     private void multiplicaçãoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicaçãoActionPerformed
-     this.setVisible(false);
-     char modulo='*';
-     Mesa Mesa=new Mesa(modulo);
-     Mesa.setVisible(true);
+        this.setVisible(false);
+        char modulo = '*';
+        Mesa Mesa = new Mesa(modulo);
+        Mesa.setVisible(true);
     }//GEN-LAST:event_multiplicaçãoActionPerformed
 
     private void divisãoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisãoActionPerformed
-     this.setVisible(false);
-     char modulo='/';
-     Mesa Mesa=new Mesa(modulo);
-     Mesa.setVisible(true);
+        this.setVisible(false);
+        char modulo = '/';
+        Mesa Mesa = new Mesa(modulo);
+        Mesa.setVisible(true);
     }//GEN-LAST:event_divisãoActionPerformed
 
     /**

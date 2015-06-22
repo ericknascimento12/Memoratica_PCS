@@ -11,29 +11,24 @@ import java.util.Scanner;
 public class Partida {
 
     //atributos
-
     private String id_partida;
     int cronometro;
     int tempo;
-     Tabuleiro Tabuleiro;
+    Tabuleiro Tabuleiro;
 
     //construtor
-    public Partida(char operador)
-    {
+    public Partida(char operador) {
         this.Tabuleiro = new Tabuleiro(operador);
-        
+
     }
-    
-    
-    public Tabuleiro getTabuleiro()
-    {
+
+    public Tabuleiro getTabuleiro() {
         return Tabuleiro;
     }
-    
 
     //mÃ©todos   
     private boolean inicializarPartida() {
-       
+
         inicializarCronometro(); //Inicializa o cronometro
 
         if (cronometro == 0) // caso o cronometro chegue a 0 a partida acaba(false)
@@ -63,24 +58,18 @@ public class Partida {
 
     }
 
-    
-
     public Peca selecionarPeca(Peca peca) //Roda o tabuleiro a procura da segunda peca virada( diferente da usada como parametro)   
     {
-        for(int i=0;i<5;i++)
-        {
-            for (int j=0;j<4;j++)
-            {
-                if(peca!=Tabuleiro.tabuleiro[i][j])
-                {
-                    if(Tabuleiro.tabuleiro[i][j].virada=true)
-                    {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (peca != Tabuleiro.tabuleiro[i][j]) {
+                    if (Tabuleiro.tabuleiro[i][j].virada = true) {
                         return Tabuleiro.tabuleiro[i][j];
                     }
                 }
             }
         }
-        return null;        
+        return null;
 
     }
 
@@ -94,18 +83,17 @@ public class Partida {
                 peca2.desvirar();
                 return false;
             }
-           if((peca1.resultado==peca2.resultado))
-           {
-               return true;
-           }
-           else return false;
+            if ((peca1.resultado == peca2.resultado)) {
+                return true;
+            } else {
+                return false;
+            }
 
-        }
-        else 
+        } else {
             return false;
+        }
     }
 
-    
     public void verificaTempo()// verifica o tempo que o jogador levou para ganhar
     {
         int tempoF = tempo - cronometro;

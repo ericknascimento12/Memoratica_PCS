@@ -23,18 +23,17 @@ public class Peca {
     public Peca(int resultado, char operador) {   /*algoritimo de criacao dos operando em cima do valor do resultado*/
 
         this.virada = false;
+        this.resultado = resultado;
 
         Random rand = new Random();
-        this.operando1 = rand.nextInt(resultado)+ 1;
-        
+        this.operando1 = rand.nextInt(resultado) + 1;
 
         if (operador == '+') {
             this.operando2 = resultado - operando1;
-        
 
         } else if (operador == '-') {
             this.operando2 = resultado + operando1;
-           
+
         } else if (operador == '/') {
             this.operando2 = resultado * operando1;
             //ao fazer o botaoo trocar a ordem do operando1 e operando 2 op2/op1=resultado
@@ -51,32 +50,24 @@ public class Peca {
     }
 
     public void desvirar() {
-        if(virada == true)
-        {
-            virada=false;
+        if (virada == true) {
+            virada = false;
+        } else {
+            virada = true;
         }
-        
-        else
-            virada=true;
-      
-     
-    
 
     }
-    
-    public int getOperando1()
-    {
+
+    public int getOperando1() {
         return operando1;
     }
-    public int getOperando2()
-    {
+
+    public int getOperando2() {
         return operando2;
     }
 
-    public int getResultado()
-    {
+    public int getResultado() {
         return resultado;
     }
-
 
 }

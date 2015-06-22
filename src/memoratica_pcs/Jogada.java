@@ -10,29 +10,21 @@ package memoratica_pcs;
  * @author Erick
  */
 public class Jogada {
-    
+
     //Atributo
     Peca peca1;
     Peca peca2;
-    
-     public Jogada()
-     {
-         
-     }
-    
+
+    public Jogada() {
+
+    }
 
 //Métodos 
-    int ContaJogada(Jogada jogada)
-    {
-        int contador=1;
-         contador=jogada.ContaJogada(jogada);
-         contador++;
+    int ContaJogada(Jogada jogada) {
+        int contador = 1;
+        contador = jogada.ContaJogada(jogada);
+        contador++;
         return 0;
-}
-    
-    
-    
-    
-    
-}
+    }
 
+}

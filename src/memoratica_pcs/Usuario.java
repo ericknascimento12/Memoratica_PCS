@@ -9,29 +9,26 @@ package memoratica_pcs;
  *
  * @author Gian
  */
-
-
-
-
 public class Usuario {
-     // Atributos
-    
+    // Atributos
+
     private String nome;
     private char modulo_liberado;
     Partida partida;
- /* 
-public static obterTempo(Partida partida){
+    /* 
+     public static obterTempo(Partida partida){
 
-return partida.verificaTempo();
-}
-*/
-    
-    public Usuario( String nome, char modulo_liberado, Partida partida) {
-       
+     return partida.verificaTempo();
+     }
+     */
+
+    public Usuario(String nome, char modulo_liberado, Partida partida) {
+
         this.nome = nome;
         this.modulo_liberado = modulo_liberado;
         this.partida = partida;
     }
+
     public String getNome() {
         return nome;
     }
@@ -55,83 +52,78 @@ return partida.verificaTempo();
     public void setPartida(Partida partida) {
         this.partida = partida;
     }
-    
-    
+
      //   private static final String USUARIO_XML = "usuario.xml";
     //Construtor
-    
-/*
-    public void gravarusuario() {
-        File usuario = new File("usuario.txt");//arquivo no local do projeto
-        char usuario_registrado;
-        try {
-            if (usuario.exists() == false) {
-                //se não haver esse arquivo ele cria um
-                usuario.createNewFile();
-            }
+    /*
+     public void gravarusuario() {
+     File usuario = new File("usuario.txt");//arquivo no local do projeto
+     char usuario_registrado;
+     try {
+     if (usuario.exists() == false) {
+     //se não haver esse arquivo ele cria um
+     usuario.createNewFile();
+     }
 
-            File[] usuarios = usuario.listFiles(); //array para guardar as linhas do arquivo
+     File[] usuarios = usuario.listFiles(); //array para guardar as linhas do arquivo
             
             
-            FileWriter fw = new FileWriter(usuario, true);
-            BufferedWriter bw = new BufferedWriter(fw);
+     FileWriter fw = new FileWriter(usuario, true);
+     BufferedWriter bw = new BufferedWriter(fw);
             
             
             
-            FileReader fr = new FileReader(usuario);
-            BufferedReader br = new BufferedReader(fr);
+     FileReader fr = new FileReader(usuario);
+     BufferedReader br = new BufferedReader(fr);
             
 
-            String linha = null;
-            while((linha = br.readLine()) != null) {
-                if (br.readLine == nome)
-                {
-                    Partida.selecionaModulo();
-                }
-                if (br.readLine == id_usuario)
-                {
-                    Partida.selecionaModulo();
-                }
-                else
-                    br.write(Partida.nome);
-                br.newLine(); //adiciona uma linha
-                br.write(Partida.id_usuario);
-                br.newLine();
-            }
+     String linha = null;
+     while((linha = br.readLine()) != null) {
+     if (br.readLine == nome)
+     {
+     Partida.selecionaModulo();
+     }
+     if (br.readLine == id_usuario)
+     {
+     Partida.selecionaModulo();
+     }
+     else
+     br.write(Partida.nome);
+     br.newLine(); //adiciona uma linha
+     br.write(Partida.id_usuario);
+     br.newLine();
+     }
             
-            br.close();
-            fr.close();
+     br.close();
+     fr.close();
             
-=======
+     =======
  
-    //Construtor
-    public Usuario (String nome,int id_usuario)
-    {
-        this.nome=nome;
-        this.id_usuario=id_usuario;
+     //Construtor
+     public Usuario (String nome,int id_usuario)
+     {
+     this.nome=nome;
+     this.id_usuario=id_usuario;
 
-    }
+     }
     
      
-                    br.close();
-                    fr.close();
+     br.close();
+     fr.close();
            
->>>>>>> origin/master
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
-    */
+     >>>>>>> origin/master
+     } catch (IOException ex) {
+     ex.printStackTrace();
+     }
+     }
+     */
     //Metodos
     /*
-    public class Usuario{
-    private static final int ESTATISTICA_XML="Estatistica.xml";
-    public Usuario(){
-    public void
-    }
-    }
+     public class Usuario{
+     private static final int ESTATISTICA_XML="Estatistica.xml";
+     public Usuario(){
+     public void
+     }
+     }
      */
-    
-  
-    
 }
