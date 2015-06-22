@@ -51,7 +51,16 @@ public class Peca {
     }
 
     public void desvirar() {
-        virada = true;
+        if(virada == true)
+        {
+            virada=false;
+        }
+        
+        else
+            virada=true;
+      
+     
+    
 
     }
     

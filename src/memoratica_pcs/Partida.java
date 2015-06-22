@@ -65,13 +65,26 @@ public class Partida {
 
     
 
-    private void selecionarPeca(Peca peca) //desvira a peca   
+    public Peca selecionarPeca(Peca peca) //Roda o tabuleiro a procura da segunda peca virada( diferente da usada como parametro)   
     {
-        peca.desvirar();
+        for(int i=0;i<5;i++)
+        {
+            for (int j=0;j<4;j++)
+            {
+                if(peca!=Tabuleiro.tabuleiro[i][j])
+                {
+                    if(Tabuleiro.tabuleiro[i][j].virada=true)
+                    {
+                        return Tabuleiro.tabuleiro[i][j];
+                    }
+                }
+            }
+        }
+        return null;        
 
     }
 
-    private void jogada(Peca peca1, Peca peca2)// como vou armazenar as pecas selecionadas em peca 1 e peca 2??
+    public boolean jogada(Peca peca1, Peca peca2)// como vou armazenar as pecas selecionadas em peca 1 e peca 2??
     {
 
         if ((peca1.virada = true) && (peca2.virada = true)) {
@@ -79,10 +92,17 @@ public class Partida {
             if (peca1.resultado != peca2.resultado) {
                 peca1.desvirar();
                 peca2.desvirar();
+                return false;
             }
+           if((peca1.resultado==peca2.resultado))
+           {
+               return true;
+           }
+           else return false;
 
         }
-    
+        else 
+            return false;
     }
 
     

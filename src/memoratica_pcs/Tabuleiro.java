@@ -27,7 +27,7 @@ public class Tabuleiro {
         int[] resultados = new int[10];
         ///////////////////////Lista Numeros///////////////////////
         ArrayList<Integer> numeros = new ArrayList();  //lista com valores de 1~100 
-        for (int i = 10; i < 121; i++) {
+        for (int i = 10; i < 101; i++) {
             numeros.add(i);
         }
 
@@ -78,8 +78,8 @@ private void distribuirPecas() //embaralha as pecas no tabuleiro ( jogar para o 
     }
 
 
-public Peca[][] getPeca()
+public Peca getPeca(int i,int j)
 {
-    return tabuleiro;
+    return tabuleiro[i][j];
 }
 }
