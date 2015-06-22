@@ -9,23 +9,7 @@ package memoratica_pcs;
  *
  * @author Gian
  */
-import java.beans.XMLDecoder;
-import java.beans.XMLEncoder;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 
 
@@ -48,16 +32,6 @@ return partida.verificaTempo();
         this.modulo_liberado = modulo_liberado;
         this.partida = partida;
     }
-    
-
-    public int getId_usuario() {
-        return id_usuario;
-    }
-
-    public void setId_usuario(int id_usuario) {
-        this.id_usuario = id_usuario;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -66,7 +40,7 @@ return partida.verificaTempo();
         this.nome = nome;
     }
 
-    public char getModulo_liberado() {
+    public char getModulo_liberado(char operador) {
         return modulo_liberado;
     }
 
