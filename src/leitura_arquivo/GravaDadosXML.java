@@ -12,7 +12,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import memoratica_pcs.Partida;
+import memoratica_pcs.Usuario;
 
 /**
  *
@@ -34,9 +34,9 @@ public class QualquerClasse {
  
         private static final String USERDATA_XML = "userdata.xml";
         
-            public void salvarJogo(Partida partida) throws IOException {
+            public void salvarJogo(Usuario usuario) throws IOException {
         try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(USERDATA_XML))) {
-            xmlEncoder.writeObject(partida);
+            xmlEncoder.writeObject(usuario);
         }
         
         
@@ -66,4 +66,5 @@ public class QualquerClasse {
        
 
     
-
+            }
+}
