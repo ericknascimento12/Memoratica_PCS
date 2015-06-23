@@ -52,7 +52,6 @@ public class Mesa extends javax.swing.JFrame {
             botoes.add(BotaoP19);
             botoes.add(BotaoP20);
         }
-        //DOIS PROBLEMAS: BUG ONDE APAREMENTEENTE CLICO EM BOTOES DE MESMO RESULTADO E ELES VOLTAM A NORMAL, outro é usar o timer para a segunda carta escolhida para nos dar tempo de vêla.
 
         botoes.get(0).addActionListener(new ActionListener() {//pega o primeiro botao da lista
             public void actionPerformed(ActionEvent evt) {
@@ -73,11 +72,11 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache ouro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[0][0].desvirar();//ambas  são viradas novamente
 
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[0][0]).desvirar();
-                        
+                        }
                         botoes.get(0).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(0).setText(" ");
@@ -109,10 +108,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não seja par
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[0][1].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[0][1]).desvirar();
-                        
+                        }
                         botoes.get(1).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(1).setText(" ");
@@ -143,10 +142,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[0][2].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[0][2]).desvirar();
-                        
+                        }
                         botoes.get(2).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(2).setText(" ");
@@ -177,11 +176,11 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[0][3].desvirar();//ambas  são viradas novamente
 
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[0][3]).desvirar();
-                        
+                        }
                         botoes.get(3).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(3).setText(" ");
@@ -212,11 +211,11 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[1][0].desvirar();//ambas  são viradas novamente
 
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[1][0]).desvirar();
-                        
+                        }
                         botoes.get(4).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(4).setText(" ");
@@ -247,10 +246,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[1][1].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[1][1]).desvirar();
-                        
+                        }
                         botoes.get(5).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(5).setText(" ");
@@ -280,10 +279,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[1][2].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[1][2]).desvirar();
-                        
+                        }
                         botoes.get(6).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(6).setText(" ");
@@ -313,10 +312,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[1][3].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[1][3]).desvirar();
-                        
+                        }
                         botoes.get(7).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(7).setText(" ");
@@ -346,10 +345,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[2][0].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[2][0]).desvirar();
-                        
+                        }
                         botoes.get(8).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(8).setText(" ");
@@ -379,10 +378,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[2][1].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[2][1]).desvirar();
-                        
+                        }
                         botoes.get(9).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(9).setText(" ");
@@ -413,10 +412,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[2][2].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[2][2]).desvirar();
-                        
+                        }
                         botoes.get(10).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(10).setText(" ");
@@ -447,10 +446,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[2][3].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[2][3]).desvirar();
-                        
+                        }
                         botoes.get(11).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(11).setText(" ");
@@ -481,10 +480,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[3][0].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[3][0]).desvirar();
-                        
+                        }
                         botoes.get(12).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(12).setText(" ");
@@ -514,10 +513,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[3][1].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[3][1]).desvirar();
-                        
+                        }
                         botoes.get(13).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(13).setText(" ");
@@ -547,10 +546,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[3][2].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[3][2]).desvirar();
-                        
+                        }
                         botoes.get(14).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(14).setText(" ");
@@ -580,10 +579,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[3][3].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[3][3]).desvirar();
-                        
+                        }
                         botoes.get(15).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(15).setText(" ");
@@ -613,10 +612,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[4][0].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[4][0]).desvirar();
-                        
+                        }
                         botoes.get(16).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(16).setText(" ");
@@ -646,10 +645,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[4][1].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[4][1]).desvirar();
-                        
+                        }
                         botoes.get(17).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(17).setText(" ");
@@ -679,10 +678,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[4][2].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[4][2]).desvirar();
-                        
+                        }
                         botoes.get(18).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(18).setText(" ");
@@ -712,10 +711,10 @@ public class Mesa extends javax.swing.JFrame {
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
-                        else 
+                        else {
                             Partida1.getTabuleiro().tabuleiro[4][3].desvirar();//ambas  são viradas novamente                        
                             Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[4][3]).desvirar();
-                        
+                        }
                         botoes.get(19).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(19).setText(" ");
@@ -728,7 +727,29 @@ public class Mesa extends javax.swing.JFrame {
             }
         });
 
-        
+        //não consegui fazer um array list usando o i e j
+//       jButton1.setText(" "+Partida1.getTabuleiro().tabuleiro[0][0].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[0][0].getOperando1()); 
+//       jButton2.setText(" "+Partida1.getTabuleiro().tabuleiro[0][1].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[0][1].getOperando1());
+//       jButton3.setText(" "+Partida1.getTabuleiro().tabuleiro[0][2].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[0][2].getOperando1());
+//       jButton4.setText(" "+Partida1.getTabuleiro().tabuleiro[0][3].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[0][3].getOperando1());
+//       jButton5.setText(" "+Partida1.getTabuleiro().tabuleiro[1][0].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[1][0].getOperando1());
+//       jButton6.setText(" "+Partida1.getTabuleiro().tabuleiro[1][1].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[1][1].getOperando1());
+//       jButton7.setText(" "+Partida1.getTabuleiro().tabuleiro[1][2].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[1][2].getOperando1());
+//       jButton8.setText(" "+Partida1.getTabuleiro().tabuleiro[1][3].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[1][3].getOperando1());
+//       jButton9.setText(" "+Partida1.getTabuleiro().tabuleiro[2][0].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[2][0].getOperando1());
+//       jButton10.setText(" "+Partida1.getTabuleiro().tabuleiro[2][1].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[2][1].getOperando1());
+//       jButton11.setText(" "+Partida1.getTabuleiro().tabuleiro[2][2].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[2][2].getOperando1());
+//       jButton12.setText(" "+Partida1.getTabuleiro().tabuleiro[2][3].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[2][3].getOperando1());
+//       jButton13.setText(" "+Partida1.getTabuleiro().tabuleiro[3][0].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[3][0].getOperando1());
+//       jButton14.setText(" "+Partida1.getTabuleiro().tabuleiro[3][1].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[3][1].getOperando1());
+//       jButton15.setText(" "+Partida1.getTabuleiro().tabuleiro[3][2].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[3][2].getOperando1());
+//       jButton16.setText(" "+Partida1.getTabuleiro().tabuleiro[3][3].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[3][3].getOperando1());
+//       jButton17.setText(" "+Partida1.getTabuleiro().tabuleiro[4][0].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[4][0].getOperando1());
+//       jButton18.setText(" "+Partida1.getTabuleiro().tabuleiro[4][1].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[4][1].getOperando1());
+//       jButton19.setText(" "+Partida1.getTabuleiro().tabuleiro[4][2].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[4][2].getOperando1());
+//       jButton20.setText(" "+Partida1.getTabuleiro().tabuleiro[4][3].getOperando2()+" "+modulo+" "+Partida1.getTabuleiro().tabuleiro[4][3].getOperando1());
+//
+//       
     }
 
     private Mesa() {
@@ -762,136 +783,68 @@ public class Mesa extends javax.swing.JFrame {
         BotaoP20 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Memorática");
-
-        BotaoP1.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP1.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP2.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP2.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP3.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP3.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP4.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP4.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP5.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP5.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP6.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP6.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP7.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP7.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP8.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP8.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP9.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP9.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP10.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP10.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP11.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP11.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP12.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP12.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-        BotaoP12.setBorderPainted(false);
-        BotaoP12.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        BotaoP13.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP13.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP14.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP14.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-        BotaoP14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoP14ActionPerformed(evt);
-            }
-        });
-
-        BotaoP15.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP15.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP16.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP16.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP17.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP17.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP18.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP18.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP19.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP19.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
-
-        BotaoP20.setBackground(new java.awt.Color(255, 102, 51));
-        BotaoP20.setFont(new java.awt.Font("Vani", 1, 17)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGap(81, 81, 81)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BotaoP17, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BotaoP13, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(BotaoP14, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                            .addComponent(BotaoP18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(BotaoP19, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(BotaoP20, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(BotaoP15, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(BotaoP16, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(BotaoP17, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(BotaoP18, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(BotaoP19, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(BotaoP20, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(BotaoP9, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BotaoP13, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(BotaoP14, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(BotaoP15, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(BotaoP16, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(BotaoP9, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(35, 35, 35)
+                            .addComponent(BotaoP10, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(34, 34, 34)
+                            .addComponent(BotaoP11, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(32, 32, 32)
+                            .addComponent(BotaoP12, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(BotaoP1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(BotaoP5, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(35, 35, 35)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(BotaoP1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(BotaoP5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(BotaoP2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(BotaoP3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(BotaoP7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(BotaoP10, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(BotaoP6, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                                    .addComponent(BotaoP11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(BotaoP8, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-                            .addComponent(BotaoP4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BotaoP12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(BotaoP6, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(34, 34, 34)
+                                    .addComponent(BotaoP7, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(32, 32, 32)
+                                    .addComponent(BotaoP8, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(BotaoP2, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(34, 34, 34)
+                                    .addComponent(BotaoP3, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(32, 32, 32)
+                                    .addComponent(BotaoP4, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(70, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(BotaoP4, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                    .addComponent(BotaoP3, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                    .addComponent(BotaoP2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                    .addComponent(BotaoP1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BotaoP4, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BotaoP3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BotaoP2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BotaoP1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BotaoP8, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -905,11 +858,11 @@ public class Mesa extends javax.swing.JFrame {
                     .addComponent(BotaoP10, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BotaoP9, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(BotaoP16, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                    .addComponent(BotaoP15, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                    .addComponent(BotaoP13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BotaoP14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BotaoP16, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BotaoP15, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BotaoP14, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BotaoP13, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BotaoP20, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -929,18 +882,14 @@ public class Mesa extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void BotaoP14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoP14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotaoP14ActionPerformed
 
     /**
      * @param args the command line arguments
