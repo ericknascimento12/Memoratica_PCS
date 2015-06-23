@@ -11,7 +11,6 @@ import java.util.Scanner;
 public class Partida {
 
     //atributos
-    private String id_partida;
     int cronometro;
     int tempo;
     Tabuleiro Tabuleiro;
