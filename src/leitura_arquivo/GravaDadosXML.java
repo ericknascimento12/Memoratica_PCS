@@ -26,19 +26,23 @@ public class GravaDadosXML {
    
     public void salvarJogo(Usuario usuario) throws IOException {
         try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(USERDATA_XML))) {
-            xmlEncoder.writeObject(usuario);
+            xmlEncoder.writeObject(usuario);//tá gerando o xml a partir do objeto de usuário
         }     
     }
+     public Usuario recuperarJogo() throws IOException {
+        Usuario usuario = new Usuario();
+        File arquivo = new File(USERDATA_XML);
+        if (arquivo.exists()) {
+            try (XMLDecoder xmlDecoder = new XMLDecoder(new FileInputStream(USERDATA_XML))) {
+                usuario = (Usuario) xmlDecoder.readObject();
+            }
+        }    
+        return usuario;
+    }
 
-public class QualquerClasse {
- 
-        private static final String USERDATA_XML = "userdata.xml";
-        
-            public void salvarJogo(Usuario usuario) throws IOException {
-        try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(USERDATA_XML))) {
-            xmlEncoder.writeObject(usuario);
-        }
-        
+    
+    
+    
         
      /*   public void salvarJogo(Partida jogo) throws IOException {
         try (XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream(USERDATA_XML))) {
