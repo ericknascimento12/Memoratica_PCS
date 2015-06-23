@@ -9,7 +9,7 @@ package memoratica_pcs;
  *
  * @author Gian
  */
-
+import java.io.Serializable;
 
 
 
@@ -17,35 +17,24 @@ public class Usuario {
      // Atributos
     
     private String nome;
-    private char modulo_liberado;
     Partida partida;
- /* 
-public static obterTempo(Partida partida){
+    char operador;
 
-return partida.verificaTempo();
-}
-*/
-    
-    public Usuario( String nome, char modulo_liberado, Partida partida) {
-       
+    public Usuario(String nome, Partida partida, char operador) {
         this.nome = nome;
-        this.modulo_liberado = modulo_liberado;
         this.partida = partida;
+        this.operador = operador;
     }
+    
+    public Usuario(){
+    }
+
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public char getModulo_liberado(char operador) {
-        return modulo_liberado;
-    }
-
-    public void setModulo_liberado(char modulo_liberado) {
-        this.modulo_liberado = modulo_liberado;
     }
 
     public Partida getPartida() {
@@ -55,7 +44,22 @@ return partida.verificaTempo();
     public void setPartida(Partida partida) {
         this.partida = partida;
     }
+
+    public char getOperador() {
+        return operador;
+    }
+
+    public void setOperador(char operador) {
+        this.operador = operador;
+    }
     
+    public static void obterResultados(Partida partida)
+    {
+        partida.verificaTempo();
+   
+     
+    }
+}
     
      //   private static final String USUARIO_XML = "usuario.xml";
     //Construtor
@@ -134,4 +138,3 @@ return partida.verificaTempo();
     
   
     
-}
