@@ -52,6 +52,7 @@ public class Mesa extends javax.swing.JFrame {
             botoes.add(BotaoP19);
             botoes.add(BotaoP20);
         }
+        //DOIS PROBLEMAS: BUG ONDE APAREMENTEENTE CLICO EM BOTOES DE MESMO RESULTADO E ELES VOLTAM A NORMAL, outro é usar o timer para a segunda carta escolhida para nos dar tempo de vêla.
 
         botoes.get(0).addActionListener(new ActionListener() {//pega o primeiro botao da lista
             public void actionPerformed(ActionEvent evt) {
