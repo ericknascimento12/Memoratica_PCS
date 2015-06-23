@@ -8,128 +8,96 @@ package memoratica_pcs;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Partida  {
+public class Partida {
+
     //atributos
     private String id_partida;
-     int cronometro;
-     int tempo;
-     Jogada jogada=new Jogada();//Precisa desse atributo?
-     Tabuleiro Tabuleiro=new Tabuleiro();
-  
+    int cronometro;
+    int tempo;
+    Tabuleiro Tabuleiro;
 
- 
     //construtor
-    public Partida()//Não sei se leva ou não parametros, pensei em botar o modulo como atributo no caso do botão
-    {
-        
+    public Partida(char operador) {
+        this.Tabuleiro = new Tabuleiro(operador);
+
     }
-            
-    
-    
-    //métodos   
-    
-    public static char selecionaModulo(/*char operador*/)//<== quando clicar no botão ira enviar como paramentro esse char operador
-    {  
-        Scanner reader = new Scanner(System.in); //não consegui encontrar uma maneira de botar o botão como parametro
-    System.out.println("Digite o modulo: ");
-    char operador = reader.next().charAt(0);
-        
-        
-        return operador;
+
+    public Tabuleiro getTabuleiro() {
+        return Tabuleiro;
     }
-    private boolean inicializarPartida()
-    {
-        distribuirPecas();   //Distribui as peças da partida
+
+    //mÃ©todos   
+    private boolean inicializarPartida() {
+
         inicializarCronometro(); //Inicializa o cronometro
-        
-        if(cronometro==0)  // caso o cronometro chegue a 0 a partida acaba(false)
+
+        if (cronometro == 0) // caso o cronometro chegue a 0 a partida acaba(false)
         {
             return false;
         }
-        
+
         return true;
     }
-    public boolean inicializarCronometro()//inicializa o cronometro
-    {    
-           
-         cronometro = tempo;  
-          try{  
-               for (int i = cronometro; i > 0; i--)
-                 {  
-                  System.out.println(i + " segundos");  
-                  Thread.sleep(1000); // 1 segundo  
-                 }  
-             System.out.println("Seu tempo acabou!");  
-             } 
-           catch (InterruptedException e)
-            {  
-             
-             return true;
-            }             
-            
-          return true;
-        
-     
-    }
-    
-    private void distribuirPecas() //embaralha as peças no tabuleiro
+
+    public boolean inicializarCronometro()//inicializa o cronometro ( fazer depois)
     {
 
+        cronometro = tempo;
+        try {
+            for (int i = cronometro; i > 0; i--) {
+                System.out.println(i + " segundos");
+                Thread.sleep(1000); // 1 segundo  
+            }
+            System.out.println("Seu tempo acabou!");
+        } catch (InterruptedException e) {
 
-    Random random = new Random();
-
-    for (int i = Tabuleiro.tabuleiro.length - 1; i > 0; i--) {
-        for (int j = Tabuleiro.tabuleiro[i].length - 1; j > 0; j--) 
-        {
-            int m = random.nextInt(i + 1);
-            int n = random.nextInt(j + 1);
-
-            Peca temp = Tabuleiro.tabuleiro[i][j];
-            Tabuleiro.tabuleiro[i][j] = Tabuleiro.tabuleiro[m][n];
-            Tabuleiro.tabuleiro[m][n] = temp;
-        }
-    
-        }
-  
-          
-   }
-
- 
-    
-    private void selecionarPeca(Peca peca) //desvira a peça   
-    {
-        peca.desvirar();
-       
-        
-    }
-    private void jogada(Peca peca1,Peca peca2)// como vou armazenar as peças selecionadas em peça 1 e peça 2??
-    {  
-        
-        if((peca1.virada=true) &&(peca2.virada=true))
-         {
-           jogada.peca1=peca1;                 
-           jogada.peca2=peca2;
-           
-         }        
-       verificaPar();
-    }
-    
-    public boolean verificaPar() // verifica  se as pecas da jogada tem mesmo  resultado
-    { 
-        if(jogada.peca1.resultado==jogada.peca2.resultado)
-        {
             return true;
         }
-        else
-            return false;
+
+        return true;
+
     }
-    
+
+    public Peca selecionarPeca(Peca peca) //Roda o tabuleiro a procura da segunda peca virada( diferente da usada como parametro)   
+    {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (peca != Tabuleiro.tabuleiro[i][j]) {
+                    if (Tabuleiro.tabuleiro[i][j].virada = true) {
+                        return Tabuleiro.tabuleiro[i][j];
+                    }
+                }
+            }
+        }
+        return null;
+
+    }
+
+    public boolean jogada(Peca peca1, Peca peca2)// como vou armazenar as pecas selecionadas em peca 1 e peca 2??
+    {
+
+        if ((peca1.virada = true) && (peca2.virada = true)) {
+
+            if (peca1.resultado != peca2.resultado) {
+                
+                return false;
+            }
+            if ((peca1.resultado == peca2.resultado)) {
+                return true;
+            } else {
+                return false;
+            }
+
+        } else {
+            return false;
+        }
+    }
+
     public void verificaTempo()// verifica o tempo que o jogador levou para ganhar
     {
-        int tempoF=tempo-cronometro;
-        System.out.println("Tempo gasto:"+ tempoF);
-         
-    }
-   
-}
+        int tempoF = tempo - cronometro;
+        System.out.println("Tempo gasto:" + tempoF);
 
+    }
+
+}

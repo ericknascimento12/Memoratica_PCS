@@ -16,18 +16,14 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu(String texto) {
         initComponents();
-        MenuL.setText("Bem vindo(a) "+texto);
-        
-        
-        
+        MenuL.setText("Bem vindo(a) " + texto);
+
     }
 
     private Menu() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    
-    }
 
-   
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -98,13 +94,13 @@ public class Menu extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(190, 190, 190)
+                                .addGap(165, 165, 165)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(multiplicação)
-                                    .addComponent(soma))
-                                .addGap(97, 97, 97)
+                                    .addComponent(multiplicação, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(soma, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(67, 67, 67)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(subtração, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(subtração, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
                                     .addComponent(divisão, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(122, 122, 122)
@@ -153,32 +149,32 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void subtraçãoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtraçãoActionPerformed
-     this.setVisible(false);  //esconde o menu
-     char modulo='-'; //decide o modulo
-     Mesa Mesa=new Mesa(modulo); // cria novo tabuleiro
-     Mesa.setVisible(true); // frame mesa
-     // falta botar o seleciona modulo como esse modulo
+        this.setVisible(false);  //esconde o menu
+        char modulo = '-'; //decide o modulo
+        Mesa Mesa = new Mesa(modulo); // cria novo tabuleiro
+        Mesa.setVisible(true); // frame mesa
+        // falta botar o seleciona modulo como esse modulo
     }//GEN-LAST:event_subtraçãoActionPerformed
 
     private void somaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_somaActionPerformed
-     this.setVisible(false);
-     char modulo='+';
-     Mesa Mesa=new Mesa(modulo);
-     Mesa.setVisible(true);
+        this.setVisible(false);
+        char modulo = '+';
+        Mesa Mesa = new Mesa(modulo);
+        Mesa.setVisible(true);
     }//GEN-LAST:event_somaActionPerformed
 
     private void multiplicaçãoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicaçãoActionPerformed
-     this.setVisible(false);
-     char modulo='*';
-     Mesa Mesa=new Mesa(modulo);
-     Mesa.setVisible(true);
+        this.setVisible(false);
+        char modulo = '*';
+        Mesa Mesa = new Mesa(modulo);
+        Mesa.setVisible(true);
     }//GEN-LAST:event_multiplicaçãoActionPerformed
 
     private void divisãoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisãoActionPerformed
-     this.setVisible(false);
-     char modulo='/';
-     Mesa Mesa=new Mesa(modulo);
-     Mesa.setVisible(true);
+        this.setVisible(false);
+        char modulo = '/';
+        Mesa Mesa = new Mesa(modulo);
+        Mesa.setVisible(true);
     }//GEN-LAST:event_divisãoActionPerformed
 
     /**

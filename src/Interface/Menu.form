@@ -55,14 +55,14 @@
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="multiplicação" min="-2" max="-2" attributes="0"/>
-                                      <Component id="soma" min="-2" max="-2" attributes="0"/>
+                                      <Component id="multiplicação" min="-2" pref="66" max="-2" attributes="0"/>
+                                      <Component id="soma" min="-2" pref="68" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="subtração" max="32767" attributes="0"/>
+                                      <Component id="subtração" pref="69" max="32767" attributes="0"/>
                                       <Component id="divisão" max="32767" attributes="0"/>
                                   </Group>
                               </Group>

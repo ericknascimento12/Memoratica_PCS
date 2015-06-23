@@ -170,40 +170,34 @@ public class TelaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void UsuariotxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuariotxtActionPerformed
-      
-        
-        
-      
+
     }//GEN-LAST:event_UsuariotxtActionPerformed
 
     private void EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarActionPerformed
-  if(Usuariotxt.getText().equals(""))
-       {
-           JOptionPane.showMessageDialog(null, "Digite seu usuário");
-       }
-  else
-       {
-           this.dispose();
-           Menu Menu = new Menu(Usuariotxt.getText());
-           Menu.setVisible(true);
-       }
-       
+        if (Usuariotxt.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Digite seu usuário");
+        } else {
+            this.dispose();
+            Menu Menu = new Menu(Usuariotxt.getText());
+            Menu.setVisible(true);
+        }
+
     }//GEN-LAST:event_EntrarActionPerformed
 
     private void EntrarStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_EntrarStateChanged
-        
+
     }//GEN-LAST:event_EntrarStateChanged
 
     private void EntrarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_EntrarFocusGained
-       
+
     }//GEN-LAST:event_EntrarFocusGained
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-       System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
-       
+
     }//GEN-LAST:event_jMenu2ActionPerformed
 
     private void jMenu2MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu2MenuSelected
@@ -211,7 +205,7 @@ public class TelaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu2MenuSelected
 
     private void jMenu2MenuDragMouseReleased(javax.swing.event.MenuDragMouseEvent evt) {//GEN-FIRST:event_jMenu2MenuDragMouseReleased
-JOptionPane.showMessageDialog(null, "Jogo produzido para trabalho de PCS");        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Jogo produzido para trabalho de PCS");        // TODO add your handling code here:
     }//GEN-LAST:event_jMenu2MenuDragMouseReleased
 
     /**
