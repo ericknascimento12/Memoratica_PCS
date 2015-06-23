@@ -10,6 +10,8 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 
 import memoratica_pcs.Partida;
@@ -55,24 +57,26 @@ public class Mesa extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent evt) {
 
                 botoes.get(0).setText(" " + Partida1.getTabuleiro().tabuleiro[0][0].getOperando2() + " " + modulo + " " + Partida1.getTabuleiro().tabuleiro[0][0].getOperando1());
+
                 Partida1.getTabuleiro().tabuleiro[0][0].desvirar();// desvira a peça 0
                 botoes.get(0).setEnabled(false);//desabilita o botao para que nao possa ser clicado de novo ate que outra peça seja escolhida
 
                 for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
 
-                    if ((botoes.get(cont).isEnabled() == false) && (botoes.get(cont) != botoes.get(0))) { //diferente dele propio
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 0)) { //diferente dele propio
                         //caso encontre outro botão pressionado e seja o par
                         if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[0][0], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[0][0])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
 
-                            botoes.get(0).setEnabled(false);// caso bem sucedido
-                            botoes.get(cont).setEnabled(false);//ambos os BOTOES sao desabilitados
+                            botoes.get(0).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
                             break;
 
-                        } //caso ache outro botão pressionado,mas não  que seja par da outra peca
+                        } //caso ache ouro botão pressionado,mas não  que seja par da outra peca
                         else {
                             Partida1.getTabuleiro().tabuleiro[0][0].desvirar();//ambas  são viradas novamente
+
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[0][0]).desvirar();
                         }
-                        Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[0][0]).desvirar();
                         botoes.get(0).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(0).setText(" ");
@@ -95,19 +99,19 @@ public class Mesa extends javax.swing.JFrame {
 
                 for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
 
-                    if ((botoes.get(cont).isEnabled() == false) && (botoes.get(cont) != botoes.get(1))) { //diferente dele propio
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 1)) { //diferente dele propio
                         //caso encontre outro botão pressionado e seja o par
                         if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[0][1], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[0][1])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
                             //as pecas sao viradas novamente no metodo jogada
-                            botoes.get(1).setEnabled(false);// caso bem sucedido
-                            botoes.get(cont).setEnabled(false);//ambos os BOTOES sao desabilitados
+                            botoes.get(1).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
                             break;
 
                         } //caso ache outro botão pressionado,mas não seja par
                         else {
-                            Partida1.getTabuleiro().tabuleiro[0][1].desvirar();//ambas  são viradas novamente
+                            Partida1.getTabuleiro().tabuleiro[0][1].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[0][1]).desvirar();
                         }
-                        Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[0][1]).desvirar();
                         botoes.get(1).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(1).setText(" ");
@@ -129,19 +133,19 @@ public class Mesa extends javax.swing.JFrame {
 
                 for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
 
-                    if ((botoes.get(cont).isEnabled() == false) && (botoes.get(cont) != botoes.get(2))) { //diferente dele propio
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 2)) { //diferente dele propio
                         //caso encontre outro botão pressionado e seja o par
                         if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[0][2], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[0][2])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
 
-                            botoes.get(2).setEnabled(false);// caso bem sucedido
-                            botoes.get(cont).setEnabled(false);//ambos os BOTOES sao desabilitados
+                            botoes.get(2).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
                         else {
-                            Partida1.getTabuleiro().tabuleiro[0][2].desvirar();//ambas  são viradas novamente
+                            Partida1.getTabuleiro().tabuleiro[0][2].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[0][2]).desvirar();
                         }
-                        Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[0][2]).desvirar();
                         botoes.get(2).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(2).setText(" ");
@@ -163,19 +167,20 @@ public class Mesa extends javax.swing.JFrame {
 
                 for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
 
-                    if ((botoes.get(cont).isEnabled() == false) && (botoes.get(cont) != botoes.get(3))) { //diferente dele propio
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 3)) { //diferente dele propio
                         //caso encontre outro botão pressionado e seja o par
                         if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[0][3], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[0][3])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
 
-                            botoes.get(3).setEnabled(false);// caso bem sucedido
-                            botoes.get(cont).setEnabled(false);//ambos os BOTOES sao desabilitados
+                            botoes.get(3).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
                         else {
                             Partida1.getTabuleiro().tabuleiro[0][3].desvirar();//ambas  são viradas novamente
+
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[0][3]).desvirar();
                         }
-                        Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[0][3]).desvirar();
                         botoes.get(3).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(3).setText(" ");
@@ -197,22 +202,522 @@ public class Mesa extends javax.swing.JFrame {
 
                 for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
 
-                    if ((botoes.get(cont).isEnabled() == false) && (botoes.get(cont) != botoes.get(4))) { //diferente dele propio
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 4)) { //diferente dele propio
                         //caso encontre outro botão pressionado e seja o par
                         if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[1][0], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[1][0])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
 
-                            botoes.get(4).setEnabled(false);// caso bem sucedido
-                            botoes.get(cont).setEnabled(false);//ambos os BOTOES sao desabilitados
+                            botoes.get(4).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
                             break;
 
                         } //caso ache outro botão pressionado,mas não  que seja par da outra peca
                         else {
                             Partida1.getTabuleiro().tabuleiro[1][0].desvirar();//ambas  são viradas novamente
+
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[1][0]).desvirar();
                         }
-                        Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[1][0]).desvirar();
                         botoes.get(4).setEnabled(true);// caso bem sucedido
                         botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
                         botoes.get(4).setText(" ");
+                        botoes.get(cont).setText(" ");
+                        break;
+
+                    }
+                }
+
+            }
+        });
+
+        botoes.get(5).addActionListener(new ActionListener() {//pega o primeiro botao da lista
+            public void actionPerformed(ActionEvent evt) {
+
+                botoes.get(5).setText(" " + Partida1.getTabuleiro().tabuleiro[1][1].getOperando2() + " " + modulo + " " + Partida1.getTabuleiro().tabuleiro[1][1].getOperando1());
+                Partida1.getTabuleiro().tabuleiro[1][1].desvirar();// desvira a peça 0
+                botoes.get(5).setEnabled(false);//desabilita o botao para que nao possa ser clicado de novo ate que outra peça seja escolhida
+                botoes.get(5).setEnabled(false);
+                for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
+
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 5)) { //diferente dele propio
+                        //caso encontre outro botão pressionado e seja o par
+                        if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[1][1], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[1][1])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
+
+                            botoes.get(5).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
+                            break;
+
+                        } //caso ache outro botão pressionado,mas não  que seja par da outra peca
+                        else {
+                            Partida1.getTabuleiro().tabuleiro[1][1].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[1][1]).desvirar();
+                        }
+                        botoes.get(5).setEnabled(true);// caso bem sucedido
+                        botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
+                        botoes.get(5).setText(" ");
+                        botoes.get(cont).setText(" ");
+                        break;
+
+                    }
+                }
+
+            }
+        });
+        botoes.get(6).addActionListener(new ActionListener() {//pega o primeiro botao da lista
+            public void actionPerformed(ActionEvent evt) {
+
+                botoes.get(6).setText(" " + Partida1.getTabuleiro().tabuleiro[1][2].getOperando2() + " " + modulo + " " + Partida1.getTabuleiro().tabuleiro[1][2].getOperando1());
+                Partida1.getTabuleiro().tabuleiro[1][2].desvirar();// desvira a peça 0
+                botoes.get(6).setEnabled(false);//desabilita o botao para que nao possa ser clicado de novo ate que outra peça seja escolhida
+                botoes.get(6).setEnabled(false);
+                for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
+
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 6)) { //diferente dele propio
+                        //caso encontre outro botão pressionado e seja o par
+                        if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[1][2], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[1][2])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
+
+                            botoes.get(6).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
+                            break;
+
+                        } //caso ache outro botão pressionado,mas não  que seja par da outra peca
+                        else {
+                            Partida1.getTabuleiro().tabuleiro[1][2].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[1][2]).desvirar();
+                        }
+                        botoes.get(6).setEnabled(true);// caso bem sucedido
+                        botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
+                        botoes.get(6).setText(" ");
+                        botoes.get(cont).setText(" ");
+                        break;
+
+                    }
+                }
+
+            }
+        });
+        botoes.get(7).addActionListener(new ActionListener() {//pega o primeiro botao da lista
+            public void actionPerformed(ActionEvent evt) {
+
+                botoes.get(7).setText(" " + Partida1.getTabuleiro().tabuleiro[1][3].getOperando2() + " " + modulo + " " + Partida1.getTabuleiro().tabuleiro[1][3].getOperando1());
+                Partida1.getTabuleiro().tabuleiro[1][3].desvirar();// desvira a peça 0
+                botoes.get(7).setEnabled(false);//desabilita o botao para que nao possa ser clicado de novo ate que outra peça seja escolhida
+                botoes.get(7).setEnabled(false);
+                for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
+
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 7)) { //diferente dele propio
+                        //caso encontre outro botão pressionado e seja o par
+                        if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[1][3], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[1][3])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
+
+                            botoes.get(7).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
+                            break;
+
+                        } //caso ache outro botão pressionado,mas não  que seja par da outra peca
+                        else {
+                            Partida1.getTabuleiro().tabuleiro[1][3].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[1][3]).desvirar();
+                        }
+                        botoes.get(7).setEnabled(true);// caso bem sucedido
+                        botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
+                        botoes.get(7).setText(" ");
+                        botoes.get(cont).setText(" ");
+                        break;
+
+                    }
+                }
+
+            }
+        });
+        botoes.get(8).addActionListener(new ActionListener() {//pega o primeiro botao da lista
+            public void actionPerformed(ActionEvent evt) {
+
+                botoes.get(8).setText(" " + Partida1.getTabuleiro().tabuleiro[2][0].getOperando2() + " " + modulo + " " + Partida1.getTabuleiro().tabuleiro[2][0].getOperando1());
+                Partida1.getTabuleiro().tabuleiro[2][0].desvirar();// desvira a peça 0
+                botoes.get(8).setEnabled(false);//desabilita o botao para que nao possa ser clicado de novo ate que outra peça seja escolhida
+                botoes.get(8).setEnabled(false);
+                for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
+
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 8)) { //diferente dele propio
+                        //caso encontre outro botão pressionado e seja o par
+                        if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[2][0], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[2][0])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
+
+                            botoes.get(8).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
+                            break;
+
+                        } //caso ache outro botão pressionado,mas não  que seja par da outra peca
+                        else {
+                            Partida1.getTabuleiro().tabuleiro[2][0].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[2][0]).desvirar();
+                        }
+                        botoes.get(8).setEnabled(true);// caso bem sucedido
+                        botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
+                        botoes.get(8).setText(" ");
+                        botoes.get(cont).setText(" ");
+                        break;
+
+                    }
+                }
+
+            }
+        });
+        botoes.get(9).addActionListener(new ActionListener() {//pega o primeiro botao da lista
+            public void actionPerformed(ActionEvent evt) {
+
+                botoes.get(9).setText(" " + Partida1.getTabuleiro().tabuleiro[2][1].getOperando2() + " " + modulo + " " + Partida1.getTabuleiro().tabuleiro[2][1].getOperando1());
+                Partida1.getTabuleiro().tabuleiro[2][1].desvirar();// desvira a peça 0
+                botoes.get(9).setEnabled(false);//desabilita o botao para que nao possa ser clicado de novo ate que outra peça seja escolhida
+                botoes.get(9).setEnabled(false);
+                for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
+
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 9)) { //diferente dele propio
+                        //caso encontre outro botão pressionado e seja o par
+                        if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[2][1], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[2][1])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
+
+                            botoes.get(9).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
+                            break;
+
+                        } //caso ache outro botão pressionado,mas não  que seja par da outra peca
+                        else {
+                            Partida1.getTabuleiro().tabuleiro[2][1].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[2][1]).desvirar();
+                        }
+                        botoes.get(9).setEnabled(true);// caso bem sucedido
+                        botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
+                        botoes.get(9).setText(" ");
+                        botoes.get(cont).setText(" ");
+                        break;
+
+                    }
+                }
+
+            }
+        });
+
+        botoes.get(10).addActionListener(new ActionListener() {//pega o primeiro botao da lista
+            public void actionPerformed(ActionEvent evt) {
+
+                botoes.get(10).setText(" " + Partida1.getTabuleiro().tabuleiro[2][2].getOperando2() + " " + modulo + " " + Partida1.getTabuleiro().tabuleiro[2][2].getOperando1());
+                Partida1.getTabuleiro().tabuleiro[2][2].desvirar();// desvira a peça 0
+                botoes.get(10).setEnabled(false);//desabilita o botao para que nao possa ser clicado de novo ate que outra peça seja escolhida
+                botoes.get(10).setEnabled(false);
+                for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
+
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 10)) { //diferente dele propio
+                        //caso encontre outro botão pressionado e seja o par
+                        if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[2][2], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[2][2])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
+
+                            botoes.get(10).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
+                            break;
+
+                        } //caso ache outro botão pressionado,mas não  que seja par da outra peca
+                        else {
+                            Partida1.getTabuleiro().tabuleiro[2][2].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[2][2]).desvirar();
+                        }
+                        botoes.get(10).setEnabled(true);// caso bem sucedido
+                        botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
+                        botoes.get(10).setText(" ");
+                        botoes.get(cont).setText(" ");
+                        break;
+
+                    }
+                }
+
+            }
+        });
+
+        botoes.get(11).addActionListener(new ActionListener() {//pega o primeiro botao da lista
+            public void actionPerformed(ActionEvent evt) {
+
+                botoes.get(11).setText(" " + Partida1.getTabuleiro().tabuleiro[2][3].getOperando2() + " " + modulo + " " + Partida1.getTabuleiro().tabuleiro[2][3].getOperando1());
+                Partida1.getTabuleiro().tabuleiro[2][3].desvirar();// desvira a peça 0
+                botoes.get(11).setEnabled(false);//desabilita o botao para que nao possa ser clicado de novo ate que outra peça seja escolhida
+                botoes.get(11).setEnabled(false);
+                for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
+
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 11)) { //diferente dele propio
+                        //caso encontre outro botão pressionado e seja o par
+                        if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[2][3], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[2][3])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
+
+                            botoes.get(11).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
+                            break;
+
+                        } //caso ache outro botão pressionado,mas não  que seja par da outra peca
+                        else {
+                            Partida1.getTabuleiro().tabuleiro[2][3].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[2][3]).desvirar();
+                        }
+                        botoes.get(11).setEnabled(true);// caso bem sucedido
+                        botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
+                        botoes.get(11).setText(" ");
+                        botoes.get(cont).setText(" ");
+                        break;
+
+                    }
+                }
+
+            }
+        });
+
+        botoes.get(12).addActionListener(new ActionListener() {//pega o primeiro botao da lista
+            public void actionPerformed(ActionEvent evt) {
+
+                botoes.get(12).setText(" " + Partida1.getTabuleiro().tabuleiro[3][0].getOperando2() + " " + modulo + " " + Partida1.getTabuleiro().tabuleiro[3][0].getOperando1());
+                Partida1.getTabuleiro().tabuleiro[3][0].desvirar();// desvira a peça 0
+                botoes.get(12).setEnabled(false);//desabilita o botao para que nao possa ser clicado de novo ate que outra peça seja escolhida
+                botoes.get(12).setEnabled(false);
+                for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
+
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 12)) { //diferente dele propio
+                        //caso encontre outro botão pressionado e seja o par
+                        if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[3][0], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[3][0])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
+
+                            botoes.get(12).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
+                            break;
+
+                        } //caso ache outro botão pressionado,mas não  que seja par da outra peca
+                        else {
+                            Partida1.getTabuleiro().tabuleiro[3][0].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[3][0]).desvirar();
+                        }
+                        botoes.get(12).setEnabled(true);// caso bem sucedido
+                        botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
+                        botoes.get(12).setText(" ");
+                        botoes.get(cont).setText(" ");
+                        break;
+
+                    }
+                }
+
+            }
+        });
+        botoes.get(13).addActionListener(new ActionListener() {//pega o primeiro botao da lista
+            public void actionPerformed(ActionEvent evt) {
+
+                botoes.get(13).setText(" " + Partida1.getTabuleiro().tabuleiro[3][1].getOperando2() + " " + modulo + " " + Partida1.getTabuleiro().tabuleiro[3][1].getOperando1());
+                Partida1.getTabuleiro().tabuleiro[3][1].desvirar();// desvira a peça 0
+                botoes.get(13).setEnabled(false);//desabilita o botao para que nao possa ser clicado de novo ate que outra peça seja escolhida
+                botoes.get(13).setEnabled(false);
+                for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
+
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 13)) { //diferente dele propio
+                        //caso encontre outro botão pressionado e seja o par
+                        if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[3][1], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[3][1])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
+
+                            botoes.get(13).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
+                            break;
+
+                        } //caso ache outro botão pressionado,mas não  que seja par da outra peca
+                        else {
+                            Partida1.getTabuleiro().tabuleiro[3][1].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[3][1]).desvirar();
+                        }
+                        botoes.get(13).setEnabled(true);// caso bem sucedido
+                        botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
+                        botoes.get(13).setText(" ");
+                        botoes.get(cont).setText(" ");
+                        break;
+
+                    }
+                }
+
+            }
+        });
+        botoes.get(14).addActionListener(new ActionListener() {//pega o primeiro botao da lista
+            public void actionPerformed(ActionEvent evt) {
+
+                botoes.get(14).setText(" " + Partida1.getTabuleiro().tabuleiro[3][2].getOperando2() + " " + modulo + " " + Partida1.getTabuleiro().tabuleiro[3][2].getOperando1());
+                Partida1.getTabuleiro().tabuleiro[3][2].desvirar();// desvira a peça 0
+                botoes.get(14).setEnabled(false);//desabilita o botao para que nao possa ser clicado de novo ate que outra peça seja escolhida
+                botoes.get(14).setEnabled(false);
+                for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
+
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 14)) { //diferente dele propio
+                        //caso encontre outro botão pressionado e seja o par
+                        if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[3][2], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[3][2])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
+
+                            botoes.get(14).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
+                            break;
+
+                        } //caso ache outro botão pressionado,mas não  que seja par da outra peca
+                        else {
+                            Partida1.getTabuleiro().tabuleiro[3][2].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[3][2]).desvirar();
+                        }
+                        botoes.get(14).setEnabled(true);// caso bem sucedido
+                        botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
+                        botoes.get(14).setText(" ");
+                        botoes.get(cont).setText(" ");
+                        break;
+
+                    }
+                }
+
+            }
+        });
+        botoes.get(15).addActionListener(new ActionListener() {//pega o primeiro botao da lista
+            public void actionPerformed(ActionEvent evt) {
+
+                botoes.get(15).setText(" " + Partida1.getTabuleiro().tabuleiro[3][3].getOperando2() + " " + modulo + " " + Partida1.getTabuleiro().tabuleiro[3][3].getOperando1());
+                Partida1.getTabuleiro().tabuleiro[3][3].desvirar();// desvira a peça 0
+                botoes.get(15).setEnabled(false);//desabilita o botao para que nao possa ser clicado de novo ate que outra peça seja escolhida
+                botoes.get(15).setEnabled(false);
+                for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
+
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 15)) { //diferente dele propio
+                        //caso encontre outro botão pressionado e seja o par
+                        if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[3][3], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[3][3])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
+
+                            botoes.get(15).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
+                            break;
+
+                        } //caso ache outro botão pressionado,mas não  que seja par da outra peca
+                        else {
+                            Partida1.getTabuleiro().tabuleiro[3][3].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[3][3]).desvirar();
+                        }
+                        botoes.get(15).setEnabled(true);// caso bem sucedido
+                        botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
+                        botoes.get(15).setText(" ");
+                        botoes.get(cont).setText(" ");
+                        break;
+
+                    }
+                }
+
+            }
+        });
+        botoes.get(16).addActionListener(new ActionListener() {//pega o primeiro botao da lista
+            public void actionPerformed(ActionEvent evt) {
+
+                botoes.get(16).setText(" " + Partida1.getTabuleiro().tabuleiro[4][0].getOperando2() + " " + modulo + " " + Partida1.getTabuleiro().tabuleiro[4][0].getOperando1());
+                Partida1.getTabuleiro().tabuleiro[4][0].desvirar();// desvira a peça 0
+                botoes.get(16).setEnabled(false);//desabilita o botao para que nao possa ser clicado de novo ate que outra peça seja escolhida
+                botoes.get(16).setEnabled(false);
+                for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
+
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 16)) { //diferente dele propio
+                        //caso encontre outro botão pressionado e seja o par
+                        if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[4][0], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[4][0])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
+
+                            botoes.get(16).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
+                            break;
+
+                        } //caso ache outro botão pressionado,mas não  que seja par da outra peca
+                        else {
+                            Partida1.getTabuleiro().tabuleiro[4][0].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[4][0]).desvirar();
+                        }
+                        botoes.get(16).setEnabled(true);// caso bem sucedido
+                        botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
+                        botoes.get(16).setText(" ");
+                        botoes.get(cont).setText(" ");
+                        break;
+
+                    }
+                }
+
+            }
+        });
+        botoes.get(17).addActionListener(new ActionListener() {//pega o primeiro botao da lista
+            public void actionPerformed(ActionEvent evt) {
+
+                botoes.get(17).setText(" " + Partida1.getTabuleiro().tabuleiro[4][1].getOperando2() + " " + modulo + " " + Partida1.getTabuleiro().tabuleiro[4][1].getOperando1());
+                Partida1.getTabuleiro().tabuleiro[4][1].desvirar();// desvira a peça 0
+                botoes.get(17).setEnabled(false);//desabilita o botao para que nao possa ser clicado de novo ate que outra peça seja escolhida
+                botoes.get(17).setEnabled(false);
+                for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
+
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 17)) { //diferente dele propio
+                        //caso encontre outro botão pressionado e seja o par
+                        if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[4][1], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[4][1])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
+
+                            botoes.get(17).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
+                            break;
+
+                        } //caso ache outro botão pressionado,mas não  que seja par da outra peca
+                        else {
+                            Partida1.getTabuleiro().tabuleiro[4][1].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[4][1]).desvirar();
+                        }
+                        botoes.get(17).setEnabled(true);// caso bem sucedido
+                        botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
+                        botoes.get(17).setText(" ");
+                        botoes.get(cont).setText(" ");
+                        break;
+
+                    }
+                }
+
+            }
+        });
+        botoes.get(18).addActionListener(new ActionListener() {//pega o primeiro botao da lista
+            public void actionPerformed(ActionEvent evt) {
+
+                botoes.get(18).setText(" " + Partida1.getTabuleiro().tabuleiro[4][2].getOperando2() + " " + modulo + " " + Partida1.getTabuleiro().tabuleiro[4][2].getOperando1());
+                Partida1.getTabuleiro().tabuleiro[4][2].desvirar();// desvira a peça 0
+                botoes.get(18).setEnabled(false);//desabilita o botao para que nao possa ser clicado de novo ate que outra peça seja escolhida
+                botoes.get(18).setEnabled(false);
+                for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
+
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 18)) { //diferente dele propio
+                        //caso encontre outro botão pressionado e seja o par
+                        if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[4][2], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[4][2])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
+
+                            botoes.get(18).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
+                            break;
+
+                        } //caso ache outro botão pressionado,mas não  que seja par da outra peca
+                        else {
+                            Partida1.getTabuleiro().tabuleiro[4][2].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[4][2]).desvirar();
+                        }
+                        botoes.get(18).setEnabled(true);// caso bem sucedido
+                        botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
+                        botoes.get(18).setText(" ");
+                        botoes.get(cont).setText(" ");
+                        break;
+
+                    }
+                }
+
+            }
+        });
+        botoes.get(19).addActionListener(new ActionListener() {//pega o primeiro botao da lista
+            public void actionPerformed(ActionEvent evt) {
+
+                botoes.get(19).setText(" " + Partida1.getTabuleiro().tabuleiro[4][3].getOperando2() + " " + modulo + " " + Partida1.getTabuleiro().tabuleiro[4][3].getOperando1());
+                Partida1.getTabuleiro().tabuleiro[4][3].desvirar();// desvira a peça 0
+                botoes.get(19).setEnabled(false);//desabilita o botao para que nao possa ser clicado de novo ate que outra peça seja escolhida
+                botoes.get(19).setEnabled(false);
+                for (int cont = 0; cont < 20; cont++) {//percorre a lista em busca de outro botão pressionado
+
+                    if ((botoes.get(cont).isEnabled() == false) && (cont != 19)) { //diferente dele propio
+                        //caso encontre outro botão pressionado e seja o par
+                        if (Partida1.jogada(Partida1.getTabuleiro().tabuleiro[4][3], Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[4][3])) == true) {//compara a peca 0 com a  outra peca virada do  tabuleiro.
+
+                            botoes.get(19).setVisible(false);// caso bem sucedido
+                            botoes.get(cont).setVisible(false);//ambos os BOTOES sao desabilitados
+                            break;
+
+                        } //caso ache outro botão pressionado,mas não  que seja par da outra peca
+                        else {
+                            Partida1.getTabuleiro().tabuleiro[4][3].desvirar();//ambas  são viradas novamente                        
+                            Partida1.selecionarPeca(Partida1.getTabuleiro().tabuleiro[4][3]).desvirar();
+                        }
+                        botoes.get(19).setEnabled(true);// caso bem sucedido
+                        botoes.get(cont).setEnabled(true);//ambos os BOTOES sao desabilitados
+                        botoes.get(19).setText(" ");
                         botoes.get(cont).setText(" ");
                         break;
 
@@ -284,7 +789,7 @@ public class Mesa extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(127, 127, 127)
+                .addGap(81, 81, 81)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(BotaoP17, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -312,27 +817,29 @@ public class Mesa extends javax.swing.JFrame {
                             .addGap(32, 32, 32)
                             .addComponent(BotaoP12, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(BotaoP5, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(BotaoP1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(BotaoP5, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(35, 35, 35)
-                            .addComponent(BotaoP6, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(34, 34, 34)
-                            .addComponent(BotaoP7, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(32, 32, 32)
-                            .addComponent(BotaoP8, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(BotaoP1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(35, 35, 35)
-                            .addComponent(BotaoP2, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(34, 34, 34)
-                            .addComponent(BotaoP3, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(32, 32, 32)
-                            .addComponent(BotaoP4, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(126, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(BotaoP6, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(34, 34, 34)
+                                    .addComponent(BotaoP7, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(32, 32, 32)
+                                    .addComponent(BotaoP8, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(BotaoP2, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(34, 34, 34)
+                                    .addComponent(BotaoP3, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(32, 32, 32)
+                                    .addComponent(BotaoP4, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(73, 73, 73)
+                .addGap(37, 37, 37)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BotaoP4, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BotaoP3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -362,7 +869,7 @@ public class Mesa extends javax.swing.JFrame {
                     .addComponent(BotaoP19, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BotaoP18, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BotaoP17, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

@@ -79,8 +79,7 @@ public class Partida {
         if ((peca1.virada = true) && (peca2.virada = true)) {
 
             if (peca1.resultado != peca2.resultado) {
-                peca1.desvirar();
-                peca2.desvirar();
+                
                 return false;
             }
             if ((peca1.resultado == peca2.resultado)) {
