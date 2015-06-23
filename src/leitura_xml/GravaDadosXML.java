@@ -35,12 +35,7 @@ public class GravaDadosXML {
         }     
     }
 
-    /**
-     *
-     * @return
-     * @throws IOException
-     */
-    public Usuario recuperarJogo() throws IOException {
+       public Usuario recuperarJogo() throws IOException {
         Usuario usuario = new Usuario();
         File arquivo = new File(USERDATA_XML);
         if (arquivo.exists()) {
