@@ -11,7 +11,6 @@ import java.util.Scanner;
 public class Partida {
 
     //atributos
-    private String id_partida;
     int cronometro;
     int tempo;
     Tabuleiro Tabuleiro;
@@ -83,12 +82,17 @@ public class Partida {
                 return false;
             }
             if ((peca1.resultado == peca2.resultado)) {
-                return true;
-            } else {
-                return false;
+               peca1.desvirar();//desvira as pecas
+               peca2.desvirar();//desviras as pecas
+                
+               return true;
             }
+            
+            else
+                return false;
 
-        } else {
+        } 
+        else {
             return false;
         }
     }
